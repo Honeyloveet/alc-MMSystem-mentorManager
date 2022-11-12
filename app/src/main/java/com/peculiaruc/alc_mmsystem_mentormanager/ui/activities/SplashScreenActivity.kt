@@ -1,4 +1,4 @@
-package com.peculiaruc.alc_mmsystem_mentormanager.ui.activites
+package com.peculiaruc.alc_mmsystem_mentormanager.ui.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -20,7 +20,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
             finish()
         }, timeDelay)
