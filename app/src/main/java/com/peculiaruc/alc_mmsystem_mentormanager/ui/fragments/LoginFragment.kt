@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentLoginBinding
+import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.LoginViewModel
 
 class LoginFragment : Fragment() {
 
