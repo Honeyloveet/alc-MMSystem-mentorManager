@@ -2,4 +2,14 @@
     <string name="app_name">MMS Mentor Manager</string>
     <string name="splash_screen_logo_desc">Brand Logo</string>
     <string name="splash_screen_app_name">Mentor Management System</string>
+    <string name="become_a_mentor_manager">Become a mentor manager</string>
+    <string name="fill_in_the_form_below">Fill in the form below</string>
+    <string name="page_1_of_4">Page 1 of 4</string>
+    <string name="set_a_profile_picture">Set a profile picture</string>
+    <string name="select_file">Select file</string>
+    <string name="full_name">Full Name *</string>
+    <string name="about">About</string>
+    <string name="country">Country *</string>
+    <string name="city">City *</string>
+    <string name="next">Next</string>
 </resources>
