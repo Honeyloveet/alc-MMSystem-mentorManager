@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.RegisterFormTwoFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_become_a_mentor_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="31dp"
+                android:text="@string/become_a_mentor_manager"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="18sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_fill_in_the_form_below"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fill_in_the_form_below"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView_become_a_mentor_manager"
+                app:layout_constraintTop_toBottomOf="@id/textView_become_a_mentor_manager" />
+
+            <TextView
+                android:id="@+id/textView_page_2_of_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/page_2_of_4"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView_fill_in_the_form_below"
+                app:layout_constraintTop_toBottomOf="@id/textView_fill_in_the_form_below" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_program_of_interest"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/program_of_interest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_page_2_of_4"
+                app:layout_constraintTop_toBottomOf="@+id/textView_page_2_of_4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mukta_regular"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_years_of_technical_expereience"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/years_of_technical_expereience"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_program_of_interest"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_program_of_interest">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mukta_regular"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_been_a_mentor_manager_before"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/been_a_mentor_manager_before"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_years_of_technical_expereience"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_years_of_technical_expereience">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mukta_regular"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="250dp"
+                android:layout_marginBottom="30dp"
+                android:paddingVertical="15dp"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                android:layout_marginStart="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_been_a_mentor_manager_before"
+                app:layout_constraintStart_toEndOf="@+id/button_previous"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_been_a_mentor_manager_before" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="250dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/white"
+                android:outlineProvider="none"
+                android:paddingVertical="15dp"
+                android:text="@string/previous"
+                android:textAllCaps="false"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                android:layout_marginEnd="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_next"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_been_a_mentor_manager_before"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_been_a_mentor_manager_before"
+                app:strokeColor="@color/mms_pry_2"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

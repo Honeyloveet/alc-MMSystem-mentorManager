@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter
 import androidx.core.content.PermissionChecker
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.peculiaruc.alc_mmsystem_mentormanager.R
@@ -58,6 +59,10 @@ class RegisterFormOneFragment : Fragment() {
                 this.requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),1)
             else
                 openImageChooserIntent()
+        }
+
+        binding?.buttonNext?.setOnClickListener {
+            findNavController().navigate(RegisterFormOneFragmentDirections.actionRegisterFormOneFragmentToRegisterFormTwoFragment())
         }
 
         return binding?.root

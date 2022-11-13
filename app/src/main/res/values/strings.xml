@@ -12,4 +12,9 @@
     <string name="country">Country *</string>
     <string name="city">City *</string>
     <string name="next">Next</string>
+    <string name="page_2_of_4">Page 2 of 4</string>
+    <string name="previous">Previous</string>
+    <string name="program_of_interest">Program of Interest *</string>
+    <string name="years_of_technical_expereience">Years of technical expereience *</string>
+    <string name="been_a_mentor_manager_before">Been a mentor manager before? *</string>
 </resources>
