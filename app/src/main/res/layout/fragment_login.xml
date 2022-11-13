@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.LoginFragment">
+
+    <TextView
+        android:id="@+id/textView_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mukta_bold"
+        android:text="@string/welcome"
+        android:textColor="@color/mms_pry_2"
+        android:textSize="18sp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_sign_in_to_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mukta_regular"
+        android:text="@string/sign_in_to_continue"
+        android:textColor="@color/mms_black_2"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_welcome"
+        app:layout_constraintTop_toBottomOf="@id/textView_welcome" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_sign_in_to_continue"
+        app:layout_constraintTop_toBottomOf="@+id/textView_sign_in_to_continue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/password"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_sign_in_to_continue"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textView_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textColor="@color/mms_black_2"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:fontFamily="@font/mukta_regular"
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+
+    <TextView
+        android:id="@+id/textView_or_sign_in_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/or_sign_in_with"
+        android:textColor="@color/mms_black_4"
+        android:textSize="16sp"
+        android:layout_marginTop="100dp"
+        app:fontFamily="@font/mukta_medium"
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_marginTop="70dp"
+        app:fontFamily="@font/mukta_semi_bold"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:paddingVertical="15dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_password"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextField_password"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_login_with_google"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="15dp"
+        android:text="@string/google"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/mms_pry_2"
+        android:textColor="@color/mms_pry_2"
+        app:strokeWidth="1dp"
+        android:outlineProvider="none"
+        android:backgroundTint="@color/white"
+        app:fontFamily="@font/mukta_semi_bold"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_password"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextField_password"
+        app:layout_constraintTop_toBottomOf="@+id/textView_or_sign_in_with" />
+
+
+    <TextView
+        android:id="@+id/textView_new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_user"
+        android:textColor="@color/mms_black_2"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:fontFamily="@font/mukta_regular"
+        app:layout_constraintStart_toStartOf="@+id/button_login_with_google"
+        app:layout_constraintTop_toBottomOf="@+id/button_login_with_google" />
+
+    <TextView
+        android:id="@+id/textView_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/mms_pry_2"
+        android:textSize="16sp"
+        app:fontFamily="@font/mukta_regular"
+        app:layout_constraintStart_toEndOf="@+id/textView_new_user"
+        app:layout_constraintTop_toBottomOf="@+id/button_login_with_google" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
