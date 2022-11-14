@@ -17,4 +17,32 @@
     <string name="program_of_interest">Program of Interest *</string>
     <string name="years_of_technical_expereience">Years of technical expereience *</string>
     <string name="been_a_mentor_manager_before">Been a mentor manager before? *</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="or_sign_in_with">Or sign in with</string>
+    <string name="google">Google</string>
+    <string name="new_user">New user?</string>
+    <string name="sign_up"><u>Sign up</u></string>
+
+    <string name="onboard_btn_previous">Previous</string>
+    <string name="onboard_btn_next">Next</string>
+    <string name="onboard_btn_finish">Finish</string>
+
+    <!--  OnBoarding Screens Messages  -->
+    <string-array name="messages">
+        <item>Get real-time updates from
+mentors and their activities</item>
+        <item>Enjoy more control and
+supervision of mentors
+assigned to you </item>
+        <item>Improved data security with
+end-to-end encryption
+technology</item>
+    </string-array>
+
 </resources>

@@ -18,12 +18,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlcMMSystemmentorManager"
         tools:targetApi="31">
-        <activity
-            android:name=".ui.activites.MainActivity"
-            android:exported="true">
+       <activity   
+            android:name=".ui.activities.OnBoardingActivity"
+            android:exported="false"
+            android:theme="@style/splashScreenTheme">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
