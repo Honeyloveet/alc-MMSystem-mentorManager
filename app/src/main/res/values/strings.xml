@@ -2,6 +2,21 @@
     <string name="app_name">MMS Mentor Manager</string>
     <string name="splash_screen_logo_desc">Brand Logo</string>
     <string name="splash_screen_app_name">Mentor Management System</string>
+    <string name="become_a_mentor_manager">Become a mentor manager</string>
+    <string name="fill_in_the_form_below">Fill in the form below</string>
+    <string name="page_1_of_4">Page 1 of 4</string>
+    <string name="set_a_profile_picture">Set a profile picture</string>
+    <string name="select_file">Select file</string>
+    <string name="full_name">Full Name *</string>
+    <string name="about">About</string>
+    <string name="country">Country *</string>
+    <string name="city">City *</string>
+    <string name="next">Next</string>
+    <string name="page_2_of_4">Page 2 of 4</string>
+    <string name="previous">Previous</string>
+    <string name="program_of_interest">Program of Interest *</string>
+    <string name="years_of_technical_expereience">Years of technical expereience *</string>
+    <string name="been_a_mentor_manager_before">Been a mentor manager before? *</string>
 
     <string name="welcome">Welcome</string>
     <string name="sign_in_to_continue">Sign in to continue</string>
@@ -31,5 +46,3 @@ technology</item>
     </string-array>
 
 </resources>
-
-

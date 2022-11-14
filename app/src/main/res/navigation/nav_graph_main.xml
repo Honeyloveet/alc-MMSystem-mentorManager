@@ -6,6 +6,23 @@
     app:startDestination="@id/loginFragment">
 
     <fragment
+        android:id="@+id/registerFormOneFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormOneFragment"
+        android:label="fragment_register_form_one"
+        tools:layout="@layout/fragment_register_form_one" >
+        <action
+            android:id="@+id/action_registerFormOneFragment_to_registerFormTwoFragment"
+            app:destination="@id/registerFormTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormTwoFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormTwoFragment"
+        android:label="RegisterFormTwoFragment" >
+        <action
+            android:id="@+id/action_registerFormTwoFragment_to_registerFormOneFragment"
+            app:destination="@id/registerFormOneFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/loginFragment"
         android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.LoginFragment"
         android:label="fragment_login"
