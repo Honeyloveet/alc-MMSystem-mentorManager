@@ -27,6 +27,7 @@ class RegisterFormTwoFragment : Fragment() {
         }
 
         binding?.buttonNext?.setOnClickListener {
+            findNavController().navigate(RegisterFormTwoFragmentDirections.actionRegisterFormTwoFragmentToRegisterFormThreeFragment())
         }
 
         return binding?.root

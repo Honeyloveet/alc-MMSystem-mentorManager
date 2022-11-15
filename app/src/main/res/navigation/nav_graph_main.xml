@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main.xml"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/registerFormThreeFragment">
 
     <fragment
         android:id="@+id/registerFormOneFragment"
@@ -21,10 +21,21 @@
         <action
             android:id="@+id/action_registerFormTwoFragment_to_registerFormOneFragment"
             app:destination="@id/registerFormOneFragment" />
+        <action
+            android:id="@+id/action_registerFormTwoFragment_to_registerFormThreeFragment"
+            app:destination="@id/registerFormThreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFormThreeFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormThreeFragment"
+        android:label="RegisterFormThreeFragment" >
+        <action
+            android:id="@+id/action_registerFormThreeFragment_to_registerFormTwoFragment"
+            app:destination="@id/registerFormTwoFragment" />
+    </fragment>
 </navigation>

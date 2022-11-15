@@ -32,6 +32,23 @@
     <string name="onboard_btn_previous">Previous</string>
     <string name="onboard_btn_next">Next</string>
     <string name="onboard_btn_finish">Finish</string>
+    <string name="page_3_of_4">Page 3 of 4</string>
+    <string name="technical_proficiency">Technical Proficiency</string>
+    <string name="python">Python</string>
+    <string name="java">Java</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="django">Django</string>
+    <string name="javascript">JavaScript</string>
+    <string name="my_sql">My SQL</string>
+    <string name="android">Android</string>
+    <string name="swift">Swift</string>
+    <string name="c_plus_plus">C++</string>
+    <string name="previous_roles_held">Previous Roles Held</string>
+    <string name="learner">Learner</string>
+    <string name="mentor">Mentor</string>
+    <string name="program_assistant">Program Assistant</string>
+    <string name="program_assistant_lead">Program Assistant Lead</string>
+    <string name="mentor_manager">Mentor Manager</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">
