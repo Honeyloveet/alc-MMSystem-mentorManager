@@ -49,6 +49,15 @@
     <string name="program_assistant">Program Assistant</string>
     <string name="program_assistant_lead">Program Assistant Lead</string>
     <string name="mentor_manager">Mentor Manager</string>
+    <string name="page_4_of_4">Page 4 of 4</string>
+    <string name="documents">Documents</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="email_address">Email address</string>
+    <string name="social">Social</string>
+    <string name="github">Github</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="twitter">Twitter</string>
+    <string name="choose">Choose</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">

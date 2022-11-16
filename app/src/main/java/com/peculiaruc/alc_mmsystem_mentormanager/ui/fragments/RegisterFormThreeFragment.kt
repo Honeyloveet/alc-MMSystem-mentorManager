@@ -37,13 +37,14 @@ class RegisterFormThreeFragment : Fragment() {
         }
 
         binding?.buttonNext?.setOnClickListener {
+            findNavController().navigate(RegisterFormThreeFragmentDirections.actionRegisterFormThreeFragmentToRegisterFormFourFragment())
         }
 
-        var chipsTechnicality = listOf(ChipDto(1,"Python"),ChipDto(2,"Java"), ChipDto(3,"Kotlin"),
+        val chipsTechnicality = listOf(ChipDto(1,"Python"),ChipDto(2,"Java"), ChipDto(3,"Kotlin"),
                                     ChipDto(4,"Django"),ChipDto(5,"JavaScript"), ChipDto(6,"My SQL"),
                                     ChipDto(6,"Android"),ChipDto(6,"Swift"),ChipDto(6,"C++"),)
 
-        var chipsRules = listOf(RoleDto(1,"Learner"),RoleDto(2,"Mentor"), RoleDto(3,"Program Assistant"),
+        val chipsRules = listOf(RoleDto(1,"Learner"),RoleDto(2,"Mentor"), RoleDto(3,"Program Assistant"),
                                 RoleDto(4,"Program Assistant Lead"),RoleDto(5,"Mentor Manager"),)
         chipsTechnicality.forEach {
             val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding?.chipGroupTechnicalProficiency, false) as Chip

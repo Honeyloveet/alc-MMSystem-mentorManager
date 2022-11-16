@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main.xml"
-    app:startDestination="@id/registerFormThreeFragment">
+    app:startDestination="@id/registerFormFourFragment">
 
     <fragment
         android:id="@+id/registerFormOneFragment"
@@ -37,5 +37,16 @@
         <action
             android:id="@+id/action_registerFormThreeFragment_to_registerFormTwoFragment"
             app:destination="@id/registerFormTwoFragment" />
+        <action
+            android:id="@+id/action_registerFormThreeFragment_to_registerFormFourFragment"
+            app:destination="@id/registerFormFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormFourFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormFourFragment"
+        android:label="RegisterFormFourFragment" >
+        <action
+            android:id="@+id/action_registerFormFourFragment_to_registerFormThreeFragment"
+            app:destination="@id/registerFormThreeFragment" />
     </fragment>
 </navigation>
