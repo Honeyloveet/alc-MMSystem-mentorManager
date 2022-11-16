@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.RegisterFormTwoFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_become_a_mentor_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="31dp"
+                android:text="@string/become_a_mentor_manager"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="18sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_fill_in_the_form_below"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fill_in_the_form_below"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView_become_a_mentor_manager"
+                app:layout_constraintTop_toBottomOf="@id/textView_become_a_mentor_manager" />
+
+            <TextView
+                android:id="@+id/textView_page_3_of_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/page_3_of_4"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView_fill_in_the_form_below"
+                app:layout_constraintTop_toBottomOf="@id/textView_fill_in_the_form_below" />
+
+            <TextView
+                android:id="@+id/textView_technical_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/technical_proficiency"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_page_3_of_4"
+                app:layout_constraintTop_toBottomOf="@id/textView_page_3_of_4" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_technical_proficiency"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/bg_chips_choose"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_technical_proficiency"
+                app:layout_constraintTop_toBottomOf="@+id/textView_technical_proficiency"
+                app:selectionRequired="true"
+                app:singleLine="false"
+                app:singleSelection="false">
+
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/textView_previous_roles_held"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/previous_roles_held"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/chipGroup_technical_proficiency"
+                app:layout_constraintTop_toBottomOf="@id/chipGroup_technical_proficiency" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_previous_roles_held"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_chips_choose"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_previous_roles_held"
+                app:layout_constraintTop_toBottomOf="@+id/textView_previous_roles_held"
+                app:selectionRequired="true"
+                android:paddingStart="20dp"
+                android:paddingEnd="5dp"
+                app:singleLine="false"
+                app:singleSelection="false">
+
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="30dp"
+                android:paddingVertical="15dp"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/chipGroup_technical_proficiency"
+                app:layout_constraintStart_toEndOf="@+id/button_previous"
+                app:layout_constraintTop_toBottomOf="@+id/chipGroup_previous_roles_held" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/white"
+                android:outlineProvider="none"
+                android:paddingVertical="15dp"
+                android:text="@string/previous"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_next"
+                app:layout_constraintStart_toStartOf="@+id/chipGroup_technical_proficiency"
+                app:layout_constraintTop_toBottomOf="@+id/chipGroup_previous_roles_held"
+                app:strokeColor="@color/mms_pry_2"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
