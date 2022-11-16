@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.RegisterFormOneFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_become_a_mentor_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="31dp"
+                android:text="@string/become_a_mentor_manager"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="18sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_fill_in_the_form_below"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fill_in_the_form_below"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView_become_a_mentor_manager"
+                app:layout_constraintTop_toBottomOf="@id/textView_become_a_mentor_manager" />
+
+            <TextView
+                android:id="@+id/textView_page_1_of_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/page_1_of_4"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView_fill_in_the_form_below"
+                app:layout_constraintTop_toBottomOf="@id/textView_fill_in_the_form_below" />
+
+            <ImageView
+                android:id="@+id/imageView_profile_img"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/textView_page_1_of_4"
+                app:layout_constraintTop_toBottomOf="@id/textView_page_1_of_4"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView_set_a_profile_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="@string/set_a_profile_picture"
+                android:textColor="@color/mms_black_2"
+                android:textSize="12sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toEndOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toTopOf="@+id/imageView_profile_img" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_select_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:outlineProvider="none"
+                android:text="@string/select_file"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:cornerRadius="10dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_profile_img"
+                app:layout_constraintStart_toStartOf="@+id/textView_set_a_profile_picture"
+                app:layout_constraintTop_toBottomOf="@+id/textView_set_a_profile_picture"
+                app:strokeColor="@color/mms_pry_2"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_fullName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/full_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_profile_img">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mukta_regular"
+                    android:maxLines="1"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_about"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/about"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_fullName"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_fullName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/mukta_regular"
+                    android:gravity="top"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_country"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/country"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_about"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_about">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/dropdown_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/mukta_regular"
+                    android:inputType="none"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField_city"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_country"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_country">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/dropdown_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/mukta_regular"
+                    android:inputType="none"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:paddingVertical="15dp"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_city"
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_city"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_city" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
