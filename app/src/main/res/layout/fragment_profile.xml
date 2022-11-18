@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/layout_top_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button_edit_profile"
+        app:layout_constraintTop_toBottomOf="@+id/topbar">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imageView_profile_img"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView_set_a_profile_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/elizabeth_ayodele"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toEndOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toTopOf="@+id/imageView_profile_img" />
+
+            <TextView
+                android:id="@+id/textView_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/mentor_manager"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toEndOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toBottomOf="@+id/textView_set_a_profile_picture" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/mms_pry_2"
+                android:drawableEnd="@drawable/ic_logout"
+                android:outlineProvider="none"
+                android:text="@string/logout"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_profile_img"
+                app:layout_constraintStart_toStartOf="@+id/textView_position"
+                app:layout_constraintTop_toBottomOf="@+id/textView_position" />
+
+            <TextView
+                android:id="@+id/textView_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/bio"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_profile_img" />
+
+            <TextView
+                android:id="@+id/textView_bio_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView_bio"
+                app:layout_constraintTop_toBottomOf="@+id/textView_bio"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim  ut cursus purus efficitur et. Duis ac enim tellus. Phasellus pharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. " />
+
+            <TextView
+                android:id="@+id/textView_technical_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/technical_proficiency"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_bio_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView_bio_content" />
+
+            <TextView
+                android:id="@+id/textView_technical_proficiency_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_technical_proficiency"
+                app:layout_constraintTop_toBottomOf="@+id/textView_technical_proficiency"
+                tools:text="Java Script, Django, Mysql, Android " />
+
+            <TextView
+                android:id="@+id/textView_previous_programs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/previous_programs"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_technical_proficiency_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView_technical_proficiency_content" />
+
+            <TextView
+                android:id="@+id/textView_previous_programs_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_previous_programs"
+                app:layout_constraintTop_toBottomOf="@+id/textView_previous_programs"
+                tools:text="GADS 2022, Google I/O Extended 2021" />
+
+            <TextView
+                android:id="@+id/textView_previous_roles_held_double_colon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/previous_roles_held_double_colon"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_previous_programs_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView_previous_programs_content" />
+
+            <TextView
+                android:id="@+id/textView_previous_roles_held_double_colon_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_previous_roles_held_double_colon"
+                app:layout_constraintTop_toBottomOf="@+id/textView_previous_roles_held_double_colon"
+                tools:text="Learner, Mentor, Program Assistant,  Program Assistant Lead" />
+
+            <TextView
+                android:id="@+id/textView_program_of_interest_double_colon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/program_of_interest_double_colon"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_previous_roles_held_double_colon_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView_previous_roles_held_double_colon_content" />
+
+            <TextView
+                android:id="@+id/textView_program_of_interest_double_colon_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:ellipsize="marquee"
+                android:paddingStart="8dp"
+                android:singleLine="true"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_program_of_interest_double_colon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_program_of_interest_double_colon"
+                app:layout_constraintTop_toTopOf="@+id/textView_program_of_interest_double_colon"
+                tools:text="Google Africa Scholarship Program" />
+
+            <TextView
+                android:id="@+id/textView_been_a_mentor_before"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/been_a_mentor_before"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_program_of_interest_double_colon"
+                app:layout_constraintTop_toBottomOf="@+id/textView_program_of_interest_double_colon" />
+
+            <TextView
+                android:id="@+id/textView_been_a_mentor_before_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:ellipsize="marquee"
+                android:paddingStart="8dp"
+                android:singleLine="true"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_been_a_mentor_before"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_been_a_mentor_before"
+                app:layout_constraintTop_toTopOf="@+id/textView_been_a_mentor_before"
+                tools:text="Yes" />
+
+            <TextView
+                android:id="@+id/textView_years_of_technical_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/years_of_technical_experience"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_been_a_mentor_before"
+                app:layout_constraintTop_toBottomOf="@+id/textView_been_a_mentor_before" />
+
+            <TextView
+                android:id="@+id/textView_years_of_technical_experience_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:ellipsize="marquee"
+                android:paddingStart="8dp"
+                android:singleLine="true"
+                android:textColor="@color/mms_black_3"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_years_of_technical_experience"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_years_of_technical_experience"
+                app:layout_constraintTop_toTopOf="@+id/textView_years_of_technical_experience"
+                tools:text="3years" />
+
+            <TextView
+                android:id="@+id/textView_documents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/documents"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_years_of_technical_experience"
+                app:layout_constraintTop_toBottomOf="@+id/textView_years_of_technical_experience" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_documents"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_documents"
+                app:layout_constraintTop_toBottomOf="@+id/textView_documents"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_document_profile" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:outlineProvider="none"
+                android:text="@string/www_andela_com"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/earth"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintStart_toStartOf="@+id/recyclerView_documents"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_documents" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_github"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_github_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintEnd_toStartOf="@+id/button_instagram"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_website"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_instagram"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_github_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_github"
+                app:layout_constraintTop_toBottomOf="@+id/button_website"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_linkedin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_linkedin_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintEnd_toStartOf="@+id/button_twitter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_instagram"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_twitter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_twitter_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_linkedin"
+                app:layout_constraintTop_toBottomOf="@+id/button_github"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_edit_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="100dp"
+        android:paddingVertical="15dp"
+        android:text="@string/edit_profile"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:fontFamily="@font/mukta_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
