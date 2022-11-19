@@ -36,7 +36,7 @@
                 android:layout_marginTop="18dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/textView_set_a_profile_picture"
@@ -105,7 +105,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView_bio"
                 app:layout_constraintTop_toBottomOf="@+id/textView_bio"
-                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim  ut cursus purus efficitur et. Duis ac enim tellus. Phasellus pharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. " />
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim  ut cursus purus efficitur et. Duis ac enim tellus. Phasellus pharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. " />
 
             <TextView
                 android:id="@+id/textView_technical_proficiency"
@@ -131,7 +131,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView_technical_proficiency"
                 app:layout_constraintTop_toBottomOf="@+id/textView_technical_proficiency"
-                tools:text="Java Script, Django, Mysql, Android " />
+                android:text="Java Script, Django, Mysql, Android " />
 
             <TextView
                 android:id="@+id/textView_previous_programs"
@@ -157,7 +157,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView_previous_programs"
                 app:layout_constraintTop_toBottomOf="@+id/textView_previous_programs"
-                tools:text="GADS 2022, Google I/O Extended 2021" />
+                android:text="GADS 2022, Google I/O Extended 2021" />
 
             <TextView
                 android:id="@+id/textView_previous_roles_held_double_colon"
@@ -183,7 +183,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView_previous_roles_held_double_colon"
                 app:layout_constraintTop_toBottomOf="@+id/textView_previous_roles_held_double_colon"
-                tools:text="Learner, Mentor, Program Assistant,  Program Assistant Lead" />
+                android:text="Learner, Mentor, Program Assistant,  Program Assistant Lead" />
 
             <TextView
                 android:id="@+id/textView_program_of_interest_double_colon"
@@ -212,7 +212,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView_program_of_interest_double_colon"
                 app:layout_constraintTop_toTopOf="@+id/textView_program_of_interest_double_colon"
-                tools:text="Google Africa Scholarship Program" />
+                android:text="Google Africa Scholarship Program" />
 
             <TextView
                 android:id="@+id/textView_been_a_mentor_before"
@@ -241,7 +241,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView_been_a_mentor_before"
                 app:layout_constraintTop_toTopOf="@+id/textView_been_a_mentor_before"
-                tools:text="Yes" />
+                android:text="Yes" />
 
             <TextView
                 android:id="@+id/textView_years_of_technical_experience"
@@ -270,7 +270,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView_years_of_technical_experience"
                 app:layout_constraintTop_toTopOf="@+id/textView_years_of_technical_experience"
-                tools:text="3years" />
+                android:text="3years" />
 
             <TextView
                 android:id="@+id/textView_documents"
@@ -426,8 +426,8 @@
         android:id="@+id/button_edit_profile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:paddingVertical="15dp"
         android:text="@string/edit_profile"
         android:textAllCaps="false"
