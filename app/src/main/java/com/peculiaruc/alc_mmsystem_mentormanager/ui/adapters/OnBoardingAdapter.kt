@@ -45,16 +45,19 @@ class OnBoardingAdapter(private val messages: List<String>, private val images: 
         holder.binding.apply {
             when (position) {
                 0 -> {
+                    onBoardingImageView.setImageResource(images[position])
                     btnPrevious.visibility = View.INVISIBLE
                     btnNext.setText(R.string.onboard_btn_next)
                     onBoardingTextVIew.text = messages[position]
                 }
                 1 -> {
+                    onBoardingImageView.setImageResource(images[position])
                     btnPrevious.visibility = View.VISIBLE
                     btnNext.setText(R.string.onboard_btn_next)
                     onBoardingTextVIew.text = messages[position]
                 }
                 2 -> {
+                    onBoardingImageView.setImageResource(images[position])
                     btnPrevious.visibility = View.VISIBLE
                     btnNext.setText(R.string.onboard_btn_finish)
                     onBoardingTextVIew.text = messages[position]

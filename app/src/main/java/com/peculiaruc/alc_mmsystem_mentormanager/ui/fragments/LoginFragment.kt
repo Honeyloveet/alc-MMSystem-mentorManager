@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentLoginBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.LoginViewModel
 
@@ -22,7 +23,9 @@ class LoginFragment : Fragment() {
         binding = FragmentLoginBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
-
+        binding?.buttonLogin?.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFormOneFragment3())
+        }
 
         return binding?.root
     }

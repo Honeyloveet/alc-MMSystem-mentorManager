@@ -7,8 +7,8 @@
     tools:context=".ui.fragments.RegisterFormTwoFragment">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="250dp"
-                android:layout_marginBottom="30dp"
                 android:paddingVertical="15dp"
                 android:text="@string/next"
                 android:textAllCaps="false"
@@ -143,7 +142,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="250dp"
                 android:layout_marginEnd="5dp"
-                android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/white"
                 android:outlineProvider="none"
                 android:paddingVertical="15dp"

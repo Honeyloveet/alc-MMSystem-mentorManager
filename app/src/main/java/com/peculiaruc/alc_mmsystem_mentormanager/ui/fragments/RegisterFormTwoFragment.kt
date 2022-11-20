@@ -23,7 +23,8 @@ class RegisterFormTwoFragment : Fragment() {
         viewModel = ViewModelProvider(this)[RegisterFormTwoViewModel::class.java]
 
         binding?.buttonPrevious?.setOnClickListener {
-            findNavController().navigateUp()
+//            findNavController().navigateUp()
+            findNavController().navigate(RegisterFormTwoFragmentDirections.actionRegisterFormTwoFragmentToRegisterFormOneFragment())
         }
 
         binding?.buttonNext?.setOnClickListener {
