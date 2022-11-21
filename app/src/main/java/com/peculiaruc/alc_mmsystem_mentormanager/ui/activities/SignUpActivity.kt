@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_mentormanager.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivitySignUpBinding
@@ -18,5 +19,12 @@ class SignUpActivity : AppCompatActivity() {
             SignUpDialogFragment().show(supportFragmentManager, "signUpDialog")
         }
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

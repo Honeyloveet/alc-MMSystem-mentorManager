@@ -31,7 +31,7 @@ class OnBoardingActivity : AppCompatActivity() {
                 if (btnText != "Finish") {
                     binding.onBoardingViewPager.setCurrentItem(position + 1, true)
                 } else {
-                    val intent = Intent(this@OnBoardingActivity, MainActivity::class.java)
+                    val intent = Intent(this@OnBoardingActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
