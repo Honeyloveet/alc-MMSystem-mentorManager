@@ -58,6 +58,15 @@
     <string name="linkedin">Linkedin</string>
     <string name="twitter">Twitter</string>
     <string name="choose">Choose</string>
+    <string name="fill_form_signup">Fill in the form below</string>
+    <string name="join_team_signup">join the team</string>
+    <string name="name_signup">Name</string>
+    <string name="registration_successful">Registration Successful</string>
+    <string name="registration_dialog_message">A verification mail has been sent to your registered email, please click the link to confirm your account.</string>
+    <string name="done_button">Done</string>
+    <string name="mentor_radio_button">Mentor</string>
+    <string name="mentor_manager_radio_button">Mentor Manager</string>
+    <string name="register_button">Register</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">
