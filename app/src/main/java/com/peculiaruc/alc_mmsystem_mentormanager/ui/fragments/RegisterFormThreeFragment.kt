@@ -4,14 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.marginBottom
-import androidx.core.view.marginStart
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipDrawable
-import com.google.android.material.shape.ShapeAppearanceModel
 import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.ChipDto
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.RoleDto
@@ -33,7 +29,7 @@ class RegisterFormThreeFragment : Fragment() {
         viewModel = ViewModelProvider(this)[RegisterFormThreeViewModel::class.java]
 
         binding?.buttonPrevious?.setOnClickListener {
-            findNavController().navigateUp()
+            findNavController().navigate(RegisterFormThreeFragmentDirections.actionRegisterFormThreeFragmentToRegisterFormTwoFragment())
         }
 
         binding?.buttonNext?.setOnClickListener {

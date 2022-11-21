@@ -96,9 +96,8 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="70dp"
-        android:paddingVertical="15dp"
         android:text="@string/login"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -111,23 +110,30 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login_with_google"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:backgroundTint="@color/white"
         android:outlineProvider="none"
         android:paddingVertical="15dp"
+        android:paddingStart="70dp"
         android:text="@string/google"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/mms_pry_2"
-        android:textSize="18sp"
+        android:textColor="@color/mms_black_4"
+        android:textSize="16sp"
         app:cornerRadius="10dp"
         app:fontFamily="@font/mukta_semi_bold"
+        app:icon="@drawable/google_icon_1"
+        app:iconPadding="-70dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
         app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_password"
         app:layout_constraintStart_toStartOf="@+id/outlinedTextField_password"
         app:layout_constraintTop_toBottomOf="@+id/textView_or_sign_in_with"
         app:strokeColor="@color/mms_pry_2"
-        app:strokeWidth="1dp" />
+        app:strokeWidth="1dp"
+        tools:ignore="RtlSymmetry" />
 
 
     <TextView

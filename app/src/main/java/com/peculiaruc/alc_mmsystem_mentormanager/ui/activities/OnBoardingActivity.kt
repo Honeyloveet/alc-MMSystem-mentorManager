@@ -79,9 +79,9 @@ class OnBoardingActivity : AppCompatActivity() {
     private fun populateLists() {
         val messages = resources.getStringArray(R.array.messages)
 
-        imagesList.add(R.drawable.onboarding_1)
-        imagesList.add(R.drawable.onboarding_1)
-        imagesList.add(R.drawable.onboarding_1)
+        imagesList.add(R.drawable.onboarding_image_1)
+        imagesList.add(R.drawable.onboarding_image_2)
+        imagesList.add(R.drawable.onboarding_image_3)
 
         for (message in messages) {
             messagesList.add(message)
