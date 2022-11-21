@@ -6,14 +6,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.DocumentDto
-import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ItemDocumentBinding
+import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ItemDocumentProfileBinding
 
-class DocumentsAdapter (
+class DocumentsProfileAdapter (
     private val documentClickListener : (DocumentDto) -> Unit,
 ) :
-    ListAdapter<DocumentDto, DocumentsAdapter.ViewHolder>(DocumentsDiffCallback()) {
+    ListAdapter<DocumentDto, DocumentsProfileAdapter.ViewHolder>(DocumentsProfileDiffCallback()) {
 
-    class ViewHolder(val binding: ItemDocumentBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(val binding: ItemDocumentProfileBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(
             item : DocumentDto,
@@ -29,7 +29,7 @@ class DocumentsAdapter (
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemDocumentBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemDocumentProfileBinding.inflate(layoutInflater, parent, false)
                 return ViewHolder(binding)
             }
         }
@@ -43,7 +43,7 @@ class DocumentsAdapter (
 
 }
 
-class DocumentsDiffCallback : DiffUtil.ItemCallback<DocumentDto>() {
+class DocumentsProfileDiffCallback : DiffUtil.ItemCallback<DocumentDto>() {
     override fun areItemsTheSame(oldItem: DocumentDto, newItem: DocumentDto): Boolean {
         return oldItem == newItem
     }

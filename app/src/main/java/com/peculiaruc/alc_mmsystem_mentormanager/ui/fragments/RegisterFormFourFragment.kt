@@ -1,19 +1,16 @@
 package com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.DocumentDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentRegisterFormFourBinding
-import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentRegisterFormThreeBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.DocumentsAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.RegisterFormFourViewModel
-import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.RegisterFormThreeViewModel
 
 class RegisterFormFourFragment : Fragment() {
 
@@ -41,6 +38,10 @@ class RegisterFormFourFragment : Fragment() {
 
         binding?.buttonPrevious?.setOnClickListener {
             findNavController().navigate(RegisterFormFourFragmentDirections.actionRegisterFormFourFragmentToRegisterFormThreeFragment())
+        }
+
+        binding?.buttonNext?.setOnClickListener {
+            findNavController().navigate(RegisterFormFourFragmentDirections.actionRegisterFormFourFragmentToProfileFragment())
         }
 
         return binding?.root
