@@ -58,6 +58,21 @@
     <string name="linkedin">Linkedin</string>
     <string name="twitter">Twitter</string>
     <string name="choose">Choose</string>
+    <string name="elizabeth_ayodele">Elizabeth Ayodele</string>
+    <string name="logout">Logout</string>
+    <string name="bio">Bio</string>
+    <string name="previous_programs">Previous Programs</string>
+    <string name="previous_roles_held_double_colon">Previous Roles Held:</string>
+    <string name="program_of_interest_double_colon">Program of interest:</string>
+    <string name="been_a_mentor_before">Been a Mentor Before?</string>
+    <string name="years_of_technical_experience">Years of Technical Experience:</string>
+    <string name="www_andela_com">www.andela.com</string>
+    <string name="peculiar_umeh">\@peculiar.umeh</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="add_program">Add Program</string>
+    <string name="instagram">Instagram</string>
+    <string name="notification">Notification</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">
