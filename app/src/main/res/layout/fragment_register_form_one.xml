@@ -61,7 +61,7 @@
                 android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="@+id/textView_page_1_of_4"
                 app:layout_constraintTop_toBottomOf="@id/textView_page_1_of_4"
-                tools:src="@mipmap/ic_launcher" />
+                tools:src="@drawable/ic_user_avater" />
 
             <TextView
                 android:id="@+id/textView_set_a_profile_picture"
@@ -77,22 +77,21 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_select_file"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:outlineProvider="none"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
                 android:text="@string/select_file"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/mms_pry_2"
                 android:textSize="12sp"
-                app:cornerRadius="10dp"
-                app:fontFamily="@font/mukta_semi_bold"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_regular"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_profile_img"
                 app:layout_constraintStart_toStartOf="@+id/textView_set_a_profile_picture"
                 app:layout_constraintTop_toBottomOf="@+id/textView_set_a_profile_picture"
                 app:strokeColor="@color/mms_pry_2"
-                app:strokeWidth="1dp" />
+                tools:ignore="TouchTargetSizeCheck" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/outlinedTextField_fullName"
@@ -179,7 +178,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_next"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:paddingVertical="15dp"

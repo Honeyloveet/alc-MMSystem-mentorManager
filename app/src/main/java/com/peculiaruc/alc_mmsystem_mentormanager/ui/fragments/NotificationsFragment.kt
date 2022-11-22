@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.peculiaruc.alc_mmsystem_mentormanager.R
@@ -28,7 +29,7 @@ class NotificationsFragment : Fragment() {
         viewModel = ViewModelProvider(this)[NotificationsViewModel::class.java]
 
         val fakeNotification = listOf(
-            NotificationDto(1, "Myresume.pdf"),
+            NotificationDto(1, "MyResume.pdf"),
             NotificationDto(2, "my certificate.doc"),
             NotificationDto(3, "my certificate2.doc"),
         )
@@ -38,9 +39,13 @@ class NotificationsFragment : Fragment() {
         binding?.recyclerViewNotifications?.adapter = notificationsAdapter
         notificationsAdapter.submitList(fakeNotification)
 
+        binding?.imageViewProfileImg?.setOnClickListener {
+            findNavController().navigate(NotificationsFragmentDirections.actionNotificationsFragmentToProfileFragment())
+        }
 
-        Glide.with(this).load(R.mipmap.ic_launcher)
+        Glide.with(this).load("https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80")
             .circleCrop()
+            .placeholder(R.drawable.ic_user_avater)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(binding!!.imageViewProfileImg)
 

@@ -3,61 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main.xml"
-    app:startDestination="@id/registerFormOneFragment">
+    app:startDestination="@id/notificationsFragment">
 
-    <fragment
-        android:id="@+id/registerFormOneFragment"
-        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormOneFragment"
-        android:label="fragment_register_form_one"
-        tools:layout="@layout/fragment_register_form_one" >
-        <action
-            android:id="@+id/action_registerFormOneFragment_to_registerFormTwoFragment"
-            app:destination="@id/registerFormTwoFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerFormTwoFragment"
-        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormTwoFragment"
-        android:label="RegisterFormTwoFragment" >
-        <action
-            android:id="@+id/action_registerFormTwoFragment_to_registerFormOneFragment"
-            app:destination="@id/registerFormOneFragment" />
-        <action
-            android:id="@+id/action_registerFormTwoFragment_to_registerFormThreeFragment"
-            app:destination="@id/registerFormThreeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerFormThreeFragment"
-        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormThreeFragment"
-        android:label="RegisterFormThreeFragment" >
-        <action
-            android:id="@+id/action_registerFormThreeFragment_to_registerFormTwoFragment"
-            app:destination="@id/registerFormTwoFragment" />
-        <action
-            android:id="@+id/action_registerFormThreeFragment_to_registerFormFourFragment"
-            app:destination="@id/registerFormFourFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerFormFourFragment"
-        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormFourFragment"
-        android:label="RegisterFormFourFragment" >
-        <action
-            android:id="@+id/action_registerFormFourFragment_to_registerFormThreeFragment"
-            app:destination="@id/registerFormThreeFragment" />
-        <action
-            android:id="@+id/action_registerFormFourFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_profileFragment_to_registerFormFourFragment"
-            app:destination="@id/registerFormFourFragment" />
-        <action
             android:id="@+id/action_profileFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
@@ -72,5 +30,9 @@
         android:id="@+id/notificationsFragment"
         android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.NotificationsFragment"
         android:label="fragment_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

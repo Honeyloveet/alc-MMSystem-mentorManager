@@ -30,7 +30,7 @@ import com.peculiaruc.alc_mmsystem_mentormanager.util.CompressUtil
 import com.peculiaruc.alc_mmsystem_mentormanager.util.MyPermissions
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.IOException
 import java.io.InputStream
 
@@ -48,8 +48,9 @@ class EditProfileFragment : Fragment() {
         viewModel = ViewModelProvider(this)[EditProfileViewModel::class.java]
 
 
-        Glide.with(this).load(R.mipmap.ic_launcher)
+        Glide.with(this).load("https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80")
             .circleCrop()
+            .placeholder(R.drawable.ic_user_avater)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(binding!!.imageViewProfileImg)
 
@@ -72,6 +73,10 @@ class EditProfileFragment : Fragment() {
             } else {
                 openImageChooserIntent()
             }
+        }
+
+        binding?.buttonSaveProfile?.setOnClickListener {
+            findNavController().navigate(EditProfileFragmentDirections.actionEditProfileFragmentToProfileFragment())
         }
 
         val chipsTechnicality = listOf(
@@ -116,9 +121,8 @@ class EditProfileFragment : Fragment() {
         documentAdapter.submitList(fakeDocs)
         documentsProfileAdapter.submitList(fakeDocs)
 
-
         binding?.topbar?.imageViewBack?.setOnClickListener {
-            findNavController().navigate(EditProfileFragmentDirections.actionEditProfileFragmentToProfileFragment())
+            findNavController().navigateUp()
         }
 
         return binding?.root
@@ -148,7 +152,7 @@ class EditProfileFragment : Fragment() {
             try {
                 val imageFile = CompressUtil.compressBitmap(imageBitmap,requireContext())
 
-                val requestFile = RequestBody.create("image/*".toMediaTypeOrNull(), imageFile)
+                val requestFile = imageFile.asRequestBody("image/*".toMediaTypeOrNull())
                 imageBody = MultipartBody.Part.createFormData("image", imageFile.name, requestFile)
 
                 Glide.with(this).load(imageFile)

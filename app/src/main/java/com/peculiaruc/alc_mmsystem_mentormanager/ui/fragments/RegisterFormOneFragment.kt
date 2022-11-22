@@ -41,12 +41,19 @@ class RegisterFormOneFragment : Fragment() {
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = FragmentRegisterFormOneBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this)[RegisterFormOneViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[RegisterFormOneViewModel::class.java]
 
-        Glide.with(this).load(R.mipmap.ic_launcher)
-            .circleCrop()
-            .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .into(binding!!.imageViewProfileImg)
+        if (viewModel.imageFile != null) {
+            Glide.with(this).load(viewModel.imageFile)
+                .circleCrop()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(binding!!.imageViewProfileImg)
+        } else {
+            Glide.with(this).load(R.drawable.ic_user_avater)
+                .circleCrop()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(binding!!.imageViewProfileImg)
+        }
 
         val fakeCountries = listOf("Egypt", "Libya", "Ghana", "Cameron")
         val adapterCountries = ArrayAdapter(requireContext(), R.layout.list_item, fakeCountries)
@@ -138,6 +145,8 @@ class RegisterFormOneFragment : Fragment() {
                     File(requireContext().cacheDir, "${System.currentTimeMillis()}_profile")
                 imageFile.createNewFile()
 
+                viewModel.imageFile = imageFile
+
                 val byteArrayOutputStream = ByteArrayOutputStream()
                 imageBitmap.compress(Bitmap.CompressFormat.JPEG, 75, byteArrayOutputStream)
 
@@ -151,7 +160,7 @@ class RegisterFormOneFragment : Fragment() {
                 val requestFile = RequestBody.create("image/*".toMediaTypeOrNull(), imageFile)
                 imageBody = MultipartBody.Part.createFormData("image", imageFile.name, requestFile)
 
-                Glide.with(this).load(imageFile)
+                Glide.with(this).load(viewModel.imageFile)
                     .circleCrop()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(binding!!.imageViewProfileImg)

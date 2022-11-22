@@ -20,7 +20,7 @@ class RegisterFormTwoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentRegisterFormTwoBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this)[RegisterFormTwoViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[RegisterFormTwoViewModel::class.java]
 
         binding?.buttonPrevious?.setOnClickListener {
 //            findNavController().navigateUp()

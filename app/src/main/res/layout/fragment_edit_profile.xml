@@ -31,11 +31,12 @@
                 android:id="@+id/imageView_profile_img"
                 android:layout_width="74dp"
                 android:layout_height="74dp"
-                android:layout_marginTop="30dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_launcher"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@mipmap/ic_launcher" />
+                tools:srcCompat="@drawable/ic_user_avater" />
 
             <TextView
                 android:id="@+id/textView_set_a_profile_picture"
@@ -51,22 +52,20 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_select_file"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:outlineProvider="none"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
                 android:text="@string/select_file"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/mms_pry_2"
                 android:textSize="12sp"
-                app:cornerRadius="10dp"
-                app:fontFamily="@font/mukta_semi_bold"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_regular"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_profile_img"
                 app:layout_constraintStart_toStartOf="@+id/textView_set_a_profile_picture"
                 app:layout_constraintTop_toBottomOf="@+id/textView_set_a_profile_picture"
-                app:strokeColor="@color/mms_pry_2"
-                app:strokeWidth="1dp" />
+                app:strokeColor="@color/mms_pry_2" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/outlinedTextField_fullName"
@@ -252,7 +251,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_previous_programs"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/add_program"
                 android:textAllCaps="false"
@@ -296,7 +295,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_upload_documents"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/upload_documents"
                 android:textAllCaps="false"
@@ -321,14 +320,14 @@
                 app:layout_constraintTop_toBottomOf="@id/button_upload_documents" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/outlinedTextField_email_address"
+                android:id="@+id/outlinedTextField_website"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                app:startIconDrawable="@drawable/ic_email_icon"
-                android:hint="@string/email_address"
+                app:startIconDrawable="@drawable/globe_world_earth_1"
+                android:hint="Website"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/recyclerView_documents"
                 app:layout_constraintTop_toBottomOf="@+id/textView_social">
@@ -351,8 +350,8 @@
                 app:startIconDrawable="@drawable/ic_github_icon"
                 android:hint="@string/github"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_email_address"
-                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_email_address">
+                app:layout_constraintStart_toStartOf="@+id/outlinedTextField_website"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_website">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -431,7 +430,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_save_profile"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:paddingVertical="15dp"

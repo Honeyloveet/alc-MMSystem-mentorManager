@@ -1,5 +1,6 @@
 package com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +13,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.DocumentDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentProfileBinding
-import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.DocumentsAdapter
+import com.peculiaruc.alc_mmsystem_mentormanager.ui.activities.LoginActivity
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.DocumentsProfileAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.ProfileViewModel
 
@@ -28,8 +29,9 @@ class ProfileFragment : Fragment() {
         binding = FragmentProfileBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
 
-        Glide.with(this).load(R.mipmap.ic_launcher)
+        Glide.with(this).load("https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80")
             .circleCrop()
+            .placeholder(R.drawable.ic_user_avater)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(binding!!.imageViewProfileImg)
 
@@ -43,6 +45,12 @@ class ProfileFragment : Fragment() {
 
         }
 
+        binding?.buttonLogout?.setOnClickListener {
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
+        }
+
         binding?.recyclerViewDocuments?.adapter = documentsProfileAdapter
 
         documentsProfileAdapter.submitList(fakeDocs)
@@ -52,7 +60,7 @@ class ProfileFragment : Fragment() {
         }
 
         binding?.topbar?.imageViewBack?.setOnClickListener {
-            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToRegisterFormFourFragment())
+            findNavController().navigateUp()
         }
 
         return binding?.root
