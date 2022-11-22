@@ -46,11 +46,13 @@ class RegisterFormOneFragment : Fragment() {
         if (viewModel.imageFile != null) {
             Glide.with(this).load(viewModel.imageFile)
                 .circleCrop()
+                .placeholder(R.drawable.ic_user_avater)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding!!.imageViewProfileImg)
         } else {
-            Glide.with(this).load(R.drawable.ic_user_avater)
+            Glide.with(this).load("https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80")
                 .circleCrop()
+                .placeholder(R.drawable.ic_user_avater)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding!!.imageViewProfileImg)
         }
