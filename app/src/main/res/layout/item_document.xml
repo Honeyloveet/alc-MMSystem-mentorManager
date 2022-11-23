@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/textView_document_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/mms_black_2"
+        android:textSize="16sp"
+        app:fontFamily="@font/mukta_regular"
+        app:layout_constraintEnd_toStartOf="@+id/textView_choose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Resume.doc" />
+
+    <TextView
+        android:id="@+id/textView_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose"
+        android:textColor="@color/mms_pry_2"
+        android:textSize="16sp"
+        android:layout_marginEnd="20dp"
+        app:fontFamily="@font/mukta_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_document_name"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_remove"
+        app:layout_constraintTop_toTopOf="@+id/textView_document_name" />
+
+    <ImageView
+        android:id="@+id/imageView_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_choose"
+        android:src="@drawable/ic_remove" />
+</androidx.constraintlayout.widget.ConstraintLayout>

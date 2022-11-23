@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.SignUpActivity">
+
+    <TextView
+        android:id="@+id/textView_join_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mukta_bold"
+        android:text="@string/join_team_signup"
+        android:textColor="@color/mms_pry_2"
+        android:textSize="18sp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_fill_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/mukta_regular"
+        android:text="@string/fill_form_signup"
+        android:textColor="@color/mms_black_2"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_join_team"
+        app:layout_constraintTop_toBottomOf="@id/textView_join_team" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="23dp"
+        android:hint="@string/name_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_fill_form"
+        app:layout_constraintTop_toBottomOf="@+id/textView_fill_form">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_name"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextField_name"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_email"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextField_email"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_email"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checkedButton="@+id/radio_button_mm"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_password"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextField_password"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_password">
+
+        <RadioButton
+            android:id="@+id/radio_button_mentor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_radio_button"
+            android:fontFamily="@font/mukta_regular"
+            android:text="@string/mentor_radio_button"
+            android:textColor="@color/mms_black_2"
+            app:buttonTint="@color/mms_pry_3" />
+
+        <RadioButton
+            android:id="@+id/radio_button_mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/mukta_regular"
+            android:text="@string/mentor_manager_radio_button"
+            android:textColor="@color/mms_black_2"
+            android:background="@drawable/bg_radio_button"
+            android:layout_marginStart="10dp"
+            app:buttonTint="@color/mms_pry_3"/>
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/register_button"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:fontFamily="@font/mukta_semi_bold"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

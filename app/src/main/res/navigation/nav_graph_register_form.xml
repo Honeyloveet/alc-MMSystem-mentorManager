@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_register_form"
+    app:startDestination="@id/registerFormOneFragment">
+
+    <fragment
+        android:id="@+id/registerFormOneFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormOneFragment"
+        android:label="fragment_register_form_one"
+        tools:layout="@layout/fragment_register_form_one" >
+        <action
+            android:id="@+id/action_registerFormOneFragment_to_registerFormTwoFragment"
+            app:destination="@id/registerFormTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormTwoFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormTwoFragment"
+        android:label="fragment_register_form_two"
+        tools:layout="@layout/fragment_register_form_two" >
+        <action
+            android:id="@+id/action_registerFormTwoFragment_to_registerFormThreeFragment"
+            app:destination="@id/registerFormThreeFragment" />
+        <action
+            android:id="@+id/action_registerFormTwoFragment_to_registerFormOneFragment"
+            app:destination="@id/registerFormOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormThreeFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormThreeFragment"
+        android:label="RegisterFormThreeFragment" >
+        <action
+            android:id="@+id/action_registerFormThreeFragment_to_registerFormFourFragment"
+            app:destination="@id/registerFormFourFragment" />
+        <action
+            android:id="@+id/action_registerFormThreeFragment_to_registerFormTwoFragment"
+            app:destination="@id/registerFormTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormFourFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.RegisterFormFourFragment"
+        android:label="RegisterFormFourFragment" >
+        <action
+            android:id="@+id/action_registerFormFourFragment_to_registerFormThreeFragment"
+            app:destination="@id/registerFormThreeFragment" />
+    </fragment>
+</navigation>

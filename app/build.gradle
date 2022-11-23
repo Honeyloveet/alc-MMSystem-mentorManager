@@ -73,4 +73,6 @@ dependencies {
 
     // Google Play Services
 //    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 }

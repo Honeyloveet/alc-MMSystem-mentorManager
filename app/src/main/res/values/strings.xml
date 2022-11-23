@@ -2,6 +2,21 @@
     <string name="app_name">MMS Mentor Manager</string>
     <string name="splash_screen_logo_desc">Brand Logo</string>
     <string name="splash_screen_app_name">Mentor Management System</string>
+    <string name="become_a_mentor_manager">Become a mentor manager</string>
+    <string name="fill_in_the_form_below">Fill in the form below</string>
+    <string name="page_1_of_4">Page 1 of 4</string>
+    <string name="set_a_profile_picture">Set a profile picture</string>
+    <string name="select_file">Select file</string>
+    <string name="full_name">Full Name *</string>
+    <string name="about">About</string>
+    <string name="country">Country *</string>
+    <string name="city">City *</string>
+    <string name="next">Next</string>
+    <string name="page_2_of_4">Page 2 of 4</string>
+    <string name="previous">Previous</string>
+    <string name="program_of_interest">Program of Interest *</string>
+    <string name="years_of_technical_expereience">Years of technical expereience *</string>
+    <string name="been_a_mentor_manager_before">Been a mentor manager before? *</string>
 
     <string name="welcome">Welcome</string>
     <string name="sign_in_to_continue">Sign in to continue</string>
@@ -10,13 +25,63 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="login">Login</string>
     <string name="or_sign_in_with">Or sign in with</string>
-    <string name="google">Google</string>
+    <string name="google">Sign in with Google</string>
     <string name="new_user">New user?</string>
     <string name="sign_up"><u>Sign up</u></string>
 
     <string name="onboard_btn_previous">Previous</string>
     <string name="onboard_btn_next">Next</string>
     <string name="onboard_btn_finish">Finish</string>
+    <string name="page_3_of_4">Page 3 of 4</string>
+    <string name="technical_proficiency">Technical Proficiency</string>
+    <string name="python">Python</string>
+    <string name="java">Java</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="django">Django</string>
+    <string name="javascript">JavaScript</string>
+    <string name="my_sql">My SQL</string>
+    <string name="android">Android</string>
+    <string name="swift">Swift</string>
+    <string name="c_plus_plus">C++</string>
+    <string name="previous_roles_held">Previous Roles Held</string>
+    <string name="learner">Learner</string>
+    <string name="mentor">Mentor</string>
+    <string name="program_assistant">Program Assistant</string>
+    <string name="program_assistant_lead">Program Assistant Lead</string>
+    <string name="mentor_manager">Mentor Manager</string>
+    <string name="page_4_of_4">Page 4 of 4</string>
+    <string name="documents">Documents</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="email_address">Email address</string>
+    <string name="social">Social</string>
+    <string name="github">Github</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="twitter">Twitter</string>
+    <string name="choose">Choose</string>
+    <string name="fill_form_signup">Fill in the form below</string>
+    <string name="join_team_signup">join the team</string>
+    <string name="name_signup">Name</string>
+    <string name="registration_successful">Registration Successful</string>
+    <string name="registration_dialog_message">A verification mail has been sent to your registered email, please click the link to confirm your account.</string>
+    <string name="done_button">Done</string>
+    <string name="mentor_radio_button">Mentor</string>
+    <string name="mentor_manager_radio_button">Mentor Manager</string>
+    <string name="register_button">Register</string>
+    <string name="elizabeth_ayodele">Elizabeth Ayodele</string>
+    <string name="logout">Logout</string>
+    <string name="bio">Bio</string>
+    <string name="previous_programs">Previous Programs</string>
+    <string name="previous_roles_held_double_colon">Previous Roles Held:</string>
+    <string name="program_of_interest_double_colon">Program of interest:</string>
+    <string name="been_a_mentor_before">Been a Mentor Before?</string>
+    <string name="years_of_technical_experience">Years of Technical Experience:</string>
+    <string name="www_andela_com">www.andela.com</string>
+    <string name="peculiar_umeh">\@peculiar.umeh</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="add_program">Add Program</string>
+    <string name="instagram">Instagram</string>
+    <string name="notification">Notification</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">
@@ -31,5 +96,3 @@ technology</item>
     </string-array>
 
 </resources>
-
-

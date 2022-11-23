@@ -31,7 +31,7 @@ class OnBoardingActivity : AppCompatActivity() {
                 if (btnText != "Finish") {
                     binding.onBoardingViewPager.setCurrentItem(position + 1, true)
                 } else {
-                    val intent = Intent(this@OnBoardingActivity, MainActivity::class.java)
+                    val intent = Intent(this@OnBoardingActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
@@ -79,9 +79,9 @@ class OnBoardingActivity : AppCompatActivity() {
     private fun populateLists() {
         val messages = resources.getStringArray(R.array.messages)
 
-        imagesList.add(R.drawable.onboarding_1)
-        imagesList.add(R.drawable.onboarding_1)
-        imagesList.add(R.drawable.onboarding_1)
+        imagesList.add(R.drawable.onboarding_image_1)
+        imagesList.add(R.drawable.onboarding_image_2)
+        imagesList.add(R.drawable.onboarding_image_3)
 
         for (message in messages) {
             messagesList.add(message)
