@@ -27,8 +27,8 @@ class OnBoardingActivity : AppCompatActivity() {
         binding.onBoardingViewPager.adapter = adapter
 
         adapter.setOnItemClickListener(object : OnBoardingAdapter.OnItemClickListener {
-            override fun onNextClick(position: Int, btnText: String) {
-                if (btnText != "Finish") {
+            override fun onNextClick(position: Int) {
+                if (position != 2) {
                     binding.onBoardingViewPager.setCurrentItem(position + 1, true)
                 } else {
                     val intent = Intent(this@OnBoardingActivity, LoginActivity::class.java)

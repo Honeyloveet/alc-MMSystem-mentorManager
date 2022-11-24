@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.OnboardingLayoutBinding
 
 class OnBoardingAdapter(private val messages: List<String>, private val images: List<Int>) : RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>() {
@@ -12,7 +11,7 @@ class OnBoardingAdapter(private val messages: List<String>, private val images: 
     private lateinit var clickListener : OnItemClickListener
 
     interface OnItemClickListener {
-        fun onNextClick(position: Int, btnText: String)
+        fun onNextClick(position: Int)
         fun onPreviousClick(position: Int)
     }
 
@@ -24,7 +23,7 @@ class OnBoardingAdapter(private val messages: List<String>, private val images: 
         init {
             binding.apply {
                 btnNext.setOnClickListener {
-                    listener.onNextClick(adapterPosition, btnNext.text.toString())
+                    listener.onNextClick(adapterPosition)
                 }
                 btnPrevious.setOnClickListener {
                     listener.onPreviousClick(adapterPosition)
@@ -47,19 +46,16 @@ class OnBoardingAdapter(private val messages: List<String>, private val images: 
                 0 -> {
                     onBoardingImageView.setImageResource(images[position])
                     btnPrevious.visibility = View.INVISIBLE
-                    btnNext.setText(R.string.onboard_btn_next)
                     onBoardingTextVIew.text = messages[position]
                 }
                 1 -> {
                     onBoardingImageView.setImageResource(images[position])
                     btnPrevious.visibility = View.VISIBLE
-                    btnNext.setText(R.string.onboard_btn_next)
                     onBoardingTextVIew.text = messages[position]
                 }
                 2 -> {
                     onBoardingImageView.setImageResource(images[position])
                     btnPrevious.visibility = View.VISIBLE
-                    btnNext.setText(R.string.onboard_btn_finish)
                     onBoardingTextVIew.text = messages[position]
                 }
             }
