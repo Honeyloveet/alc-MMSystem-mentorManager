@@ -66,16 +66,6 @@ class RegisterFormOneFragment : Fragment() {
         binding?.dropdownCity?.setAdapter(adapterCities)
 
         binding?.buttonSelectFile?.setOnClickListener {
-//            val cameraPermissions = arrayOf(Manifest.permission.CAMERA)
-//            if (!MyPermissions.isPermissionsGranted(requireActivity(), cameraPermissions)) {
-//                MyPermissions.requestPermissionFragment(
-//                    this,
-//                    cameraPermissions,
-//                    1
-//                )
-//            } else {
-//                openImageChooserIntent()
-//            }
             if (PermissionChecker.checkSelfPermission(requireContext(),Manifest.permission.READ_EXTERNAL_STORAGE) != PermissionChecker.PERMISSION_GRANTED)
                 this.requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),1)
             else
@@ -92,21 +82,6 @@ class RegisterFormOneFragment : Fragment() {
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-
-//        if (requestCode == 2 && resultCode == Activity.RESULT_OK && data != null) {
-//            val imageUri: Uri? = data.data
-//            imageUri?.let { uri ->
-//                try {
-//                    val imageStream: InputStream? =
-//                        requireActivity().contentResolver.openInputStream(uri)
-//                    val imageBitmap = BitmapFactory.decodeStream(imageStream)
-//                    setUserImageBitmap(imageBitmap)
-//                } catch (ex: IOException) {
-//
-//                }
-//            }
-//        }
-
         if (requestCode == 2 && resultCode == Activity.RESULT_OK && data != null) {
             val imageUri: Uri? = data.data
             imageUri?.let { uri ->
@@ -124,22 +99,6 @@ class RegisterFormOneFragment : Fragment() {
     }
 
     private fun setUserImageBitmap(imageBitmap: Bitmap?) {
-//        if (imageBitmap != null) {
-//            try {
-//                val imageFile = CompressUtil.compressBitmap(imageBitmap,requireContext())
-//
-//                val requestFile = RequestBody.create("image/*".toMediaTypeOrNull(), imageFile)
-//                imageBody = MultipartBody.Part.createFormData("image", imageFile.name, requestFile)
-//
-//                Glide.with(this).load(imageFile)
-//                    .circleCrop()
-//                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                    .into(binding!!.imageViewProfileImg)
-//
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
 
         if (imageBitmap != null) {
             try {
@@ -190,7 +149,7 @@ class RegisterFormOneFragment : Fragment() {
                 }
             }
             if (isAllAccepted) {
-                if (requestCode == 1)
+                //if (requestCode == 1)
                     openImageChooserIntent()
             }
         }
