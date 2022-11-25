@@ -82,6 +82,8 @@
     <string name="add_program">Add Program</string>
     <string name="instagram">Instagram</string>
     <string name="notification">Notification</string>
+    <string name="button_message">Message</string>
+    <string name="profile_toolbar">Profile</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">
@@ -94,5 +96,7 @@ assigned to you </item>
 end-to-end encryption
 technology</item>
     </string-array>
+
+
 
 </resources>

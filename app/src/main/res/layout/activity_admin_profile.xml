@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.AdminProfileActivity">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/layout_top_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button_message_admin"
+        app:layout_constraintTop_toBottomOf="@+id/topbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/imageView_profile_img"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_user_avater"
+            tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/mms_black_2"
+                android:textSize="14sp"
+                android:text="Peculiah C. Umeh"
+                app:fontFamily="@font/mukta_medium"
+                app:layout_constraintStart_toEndOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toTopOf="@+id/imageView_profile_img"
+                tools:text="Peculiah C. Umeh"/>
+
+            <ImageView
+                android:id="@+id/imageView_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/nigeria_flag"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_profile_name"
+                app:layout_constraintStart_toEndOf="@+id/textView_profile_name"
+                app:layout_constraintTop_toTopOf="@+id/textView_profile_name"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                android:text="Admin"
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintStart_toEndOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toBottomOf="@+id/textView_profile_name"
+                tools:text="Admin"/>
+
+            <TextView
+                android:id="@+id/textView_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:textColor="@color/mms_black_2"
+                android:textSize="16sp"
+                android:text="About"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_profile_img"
+                tools:text="About"/>
+
+            <TextView
+                android:id="@+id/textView_about_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim  ut cursus purus efficitur et. Duis ac enim tellus. Phasellus pharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. "
+                app:fontFamily="@font/mukta_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView_about"
+                app:layout_constraintTop_toBottomOf="@+id/textView_about"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim  ut cursus purus efficitur et. Duis ac enim tellus. Phasellus pharetra metus, ut cursus purus efficitur et. Duis ac enim tellus. Phasellus eget tortor dapibus, laoreet mauris sed, dignissim lectus. " />
+
+            <ImageView
+                android:id="@+id/imageView_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@+id/textView_about_content"
+                app:layout_constraintTop_toBottomOf="@+id/textView_about_content"
+                app:srcCompat="@drawable/ic_location_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/mukta_regular"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                android:text="Lagos, Nigeria"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_location"
+                app:layout_constraintStart_toEndOf="@+id/imageView_location"
+                app:layout_constraintTop_toTopOf="@+id/imageView_location"
+                tools:text="Lagos, Nigeria"/>
+
+            <ImageView
+                android:id="@+id/imageView_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_location"
+                app:layout_constraintStart_toStartOf="@+id/imageView_location"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_location"
+                app:srcCompat="@drawable/ic_date_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:textColor="@color/mms_black_5"
+                android:textSize="12sp"
+                android:text="Member since June 22, 2021"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_date"
+                app:layout_constraintStart_toStartOf="@+id/textView_location"
+                app:layout_constraintTop_toTopOf="@+id/imageView_date"
+                tools:text="Member since June 22, 2021"/>
+
+            <TextView
+                android:id="@+id/textView_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Social"
+                android:textColor="@color/mms_black_2"
+                android:textSize="18sp"
+                app:fontFamily="@font/mukta_bold"
+                app:layout_constraintStart_toStartOf="@+id/imageView_date"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_date"
+                tools:text="Social" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_github"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_github_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintEnd_toStartOf="@+id/button_instagram"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/textView_social"
+                app:layout_constraintTop_toBottomOf="@+id/textView_social"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_instagram"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_instagram_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintBottom_toBottomOf="@+id/button_github"
+                app:layout_constraintEnd_toEndOf="@+id/textView_about_content"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_github"
+                app:layout_constraintTop_toTopOf="@+id/button_github"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_linkedin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_linkedin_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintEnd_toStartOf="@+id/button_twitter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/button_github"
+                app:layout_constraintTop_toBottomOf="@+id/button_github"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_twitter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:outlineProvider="none"
+                android:text="@string/peculiar_umeh"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="12sp"
+                app:backgroundTint="@color/mms_green_11"
+                app:cornerRadius="5dp"
+                app:fontFamily="@font/mukta_semi_bold"
+                app:icon="@drawable/ic_twitter_icon"
+                app:iconSize="20dp"
+                app:iconTint="@color/mms_pry_2"
+                app:layout_constraintBottom_toBottomOf="@+id/button_linkedin"
+                app:layout_constraintEnd_toEndOf="@+id/button_instagram"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_linkedin"
+                app:layout_constraintTop_toTopOf="@+id/button_linkedin"
+                app:strokeColor="@color/mms_pry_10"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_message_admin"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/button_message"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:fontFamily="@font/mukta_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
