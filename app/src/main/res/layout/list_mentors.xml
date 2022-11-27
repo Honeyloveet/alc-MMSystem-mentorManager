@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_mentors"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/mms_green_11"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/mms_pry_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_profile_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile_circle"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mukta_semi_bold"
+                android:text="Peculiar C. Umeh"
+                android:textColor="@color/mms_black_2"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView_profile_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Program Assistant, Andela, She/her"
+                android:textColor="@color/mms_black_5"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/textView_label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_mentors_label"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="PROGRAM ASST."
+                android:textColor="@color/mms_pry_2"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textView_label_1"
+                app:layout_constraintTop_toBottomOf="@+id/textView_label_1"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/textView_label_3"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_mentors_label"
+                android:fontFamily="@font/mukta_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="MENTOR-GAD"
+                android:textColor="@color/mms_pry_2"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_label_2"
+                app:layout_constraintStart_toEndOf="@+id/textView_label_2"
+                app:layout_constraintTop_toTopOf="@+id/textView_label_2"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:id="@+id/imageView_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_add_circle_plus"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

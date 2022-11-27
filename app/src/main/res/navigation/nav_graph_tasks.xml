@@ -9,5 +9,54 @@
         android:id="@+id/tasksFragment"
         android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.TasksFragment"
         android:label="fragment_tasks"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_newTaskFragment"
+            app:destination="@id/newTaskFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTaskFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.NewTaskFragment"
+        android:label="fragment_new_task"
+        tools:layout="@layout/fragment_new_task" >
+        <action
+            android:id="@+id/action_newTaskFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_newTaskFragment_to_selectTaskMentorFragment"
+            app:destination="@id/selectTaskMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTaskMentorFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.SelectTaskMentorFragment"
+        android:label="fragment_select_task_mentor"
+        tools:layout="@layout/fragment_select_task_mentor" >
+        <action
+            android:id="@+id/action_selectTaskMentorFragment_to_newTaskFragment"
+            app:destination="@id/newTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.TaskDetailsFragment"
+        android:label="fragment_task_details"
+        tools:layout="@layout/fragment_task_details" >
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_taskAssignedMentorsFragment"
+            app:destination="@id/taskAssignedMentorsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskAssignedMentorsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.TaskAssignedMentorsFragment"
+        android:label="fragment_task_assigned_mentors"
+        tools:layout="@layout/fragment_task_assigned_mentors" >
+        <action
+            android:id="@+id/action_taskAssignedMentorsFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
 </navigation>

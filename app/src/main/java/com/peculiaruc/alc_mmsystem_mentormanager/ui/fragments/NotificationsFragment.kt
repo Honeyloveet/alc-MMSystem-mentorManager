@@ -19,15 +19,17 @@ import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.NotificationsView
 
 class NotificationsFragment : Fragment() {
 
-    private lateinit var viewModel: NotificationsViewModel
+    private var _binding: FragmentNotificationsBinding? = null
 
-    var binding: FragmentNotificationsBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var viewModel: NotificationsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentNotificationsBinding.inflate(layoutInflater)
+    ): View {
+        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this)[NotificationsViewModel::class.java]
 
         val fakeNotification = listOf(
@@ -37,14 +39,14 @@ class NotificationsFragment : Fragment() {
         val notificationsAdapter  = NotificationsAdapter {
 
         }
-        binding?.recyclerViewNotifications?.adapter = notificationsAdapter
+        binding.recyclerViewNotifications.adapter = notificationsAdapter
         notificationsAdapter.submitList(fakeNotification)
 
-        binding?.imageViewProfileImg?.setOnClickListener {
+        binding.imageViewProfileImg.setOnClickListener {
             findNavController().navigate(NotificationsFragmentDirections.actionNotificationsFragmentToProfileFragment())
         }
 
-        binding?.buttonContinue?.setOnClickListener {
+        binding.buttonContinue.setOnClickListener {
             val intent = Intent(activity, TempEntryActivity::class.java)
             startActivity(intent)
         }
@@ -53,14 +55,14 @@ class NotificationsFragment : Fragment() {
             .circleCrop()
             .placeholder(R.drawable.ic_user_avater)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .into(binding!!.imageViewProfileImg)
+            .into(binding.imageViewProfileImg)
 
-        return binding?.root
+        return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
+        _binding = null
     }
 
 }

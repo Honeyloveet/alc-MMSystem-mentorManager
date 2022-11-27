@@ -36,7 +36,8 @@
                 android:src="@mipmap/ic_launcher"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/ic_user_avater" />
+                tools:srcCompat="@drawable/ic_user_avater"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView_set_a_profile_picture"
@@ -65,6 +66,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_profile_img"
                 app:layout_constraintStart_toStartOf="@+id/textView_set_a_profile_picture"
                 app:layout_constraintTop_toBottomOf="@+id/textView_set_a_profile_picture"
+                app:layout_constraintVertical_bias="1.0"
                 app:strokeColor="@color/mms_pry_2"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
@@ -116,6 +118,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:hint="@string/country"
+                app:endIconDrawable="@drawable/filter_icon_state"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/outlinedTextField_about"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_about">
@@ -137,6 +140,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:hint="@string/city"
+                app:endIconDrawable="@drawable/filter_icon_state"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/outlinedTextField_country"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_country">

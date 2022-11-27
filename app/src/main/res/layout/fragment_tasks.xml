@@ -6,28 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.TasksFragment">
 
-    <include
-        android:id="@+id/topbar"
-        layout="@layout/layout_top_bar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorOnPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:titleMarginStart="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:menu="@menu/menu_search"
+            app:collapseIcon="@drawable/ic_back"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/mms_black_2"
+            app:title="Tasks"
+            app:titleTextColor="@color/mms_black_2" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup_tasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/bg_chips_group_filter"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
-        app:chipSpacingHorizontal="4dp"
         app:checkedChip="@id/chip_all_task"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topbar"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:selectionRequired="true"
         app:singleLine="true"
         app:singleSelection="true">
@@ -44,24 +63,24 @@
             style="@style/CustomChipTaskFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Assigned" />
+            android:text="Assigned"
+            android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_completed_task"
             style="@style/CustomChipTaskFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Completed" />
+            android:text="Completed"
+            android:textSize="12sp" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_my_tasks"
             style="@style/CustomChipTaskFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="My Tasks" />
+            android:text="My Tasks"
+            android:textSize="12sp" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -78,7 +97,7 @@
         tools:listitem="@layout/list_tasks_item"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fabCreateTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -89,6 +108,7 @@
         app:backgroundTint="@color/mms_pry_2"
         app:tint="@color/mms_black_10"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

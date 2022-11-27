@@ -19,21 +19,24 @@ import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.ProfileViewModel
 
 class ProfileFragment : Fragment() {
 
+    private var _binding: FragmentProfileBinding? = null
+
+    private val binding get() = _binding!!
+
     private lateinit var viewModel: ProfileViewModel
-    var binding: FragmentProfileBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentProfileBinding.inflate(layoutInflater)
+    ): View {
+        _binding = FragmentProfileBinding.inflate(layoutInflater)
         viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
 
         Glide.with(this).load("https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80")
             .circleCrop()
             .placeholder(R.drawable.ic_user_avater)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .into(binding!!.imageViewProfileImg)
+            .into(binding.imageViewProfileImg)
 
         val fakeDocs = listOf(
             DocumentDto(1, "Myresume.pdf"),
@@ -45,30 +48,30 @@ class ProfileFragment : Fragment() {
 
         }
 
-        binding?.buttonLogout?.setOnClickListener {
+        binding.buttonLogout.setOnClickListener {
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             activity?.finish()
         }
 
-        binding?.recyclerViewDocuments?.adapter = documentsProfileAdapter
+        binding.recyclerViewDocuments.adapter = documentsProfileAdapter
 
         documentsProfileAdapter.submitList(fakeDocs)
 
-        binding?.buttonEditProfile?.setOnClickListener {
+        binding.buttonEditProfile.setOnClickListener {
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToEditProfileFragment())
         }
 
-        binding?.topbar?.imageViewBack?.setOnClickListener {
+        binding.topbar.imageViewBack.setOnClickListener {
             findNavController().navigateUp()
         }
 
-        return binding?.root
+        return binding.root
     }
 
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
+        _binding = null
     }
 }

@@ -36,15 +36,17 @@ import java.io.InputStream
 
 class EditProfileFragment : Fragment() {
 
+    private var _binding: FragmentEditProfileBinding? = null
+    private val binding get() = _binding!!
     private lateinit var viewModel: EditProfileViewModel
-    var binding: FragmentEditProfileBinding? = null
+
     private var imageBody : MultipartBody.Part? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentEditProfileBinding.inflate(layoutInflater)
+    ): View {
+        _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this)[EditProfileViewModel::class.java]
 
 
@@ -52,17 +54,17 @@ class EditProfileFragment : Fragment() {
             .circleCrop()
             .placeholder(R.drawable.ic_user_avater)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .into(binding!!.imageViewProfileImg)
+            .into(binding.imageViewProfileImg)
 
         val fakeCountries = listOf("Egypt", "Libya", "Ghana", "Cameron")
         val adapterCountries = ArrayAdapter(requireContext(), R.layout.list_item, fakeCountries)
-        binding?.dropdownCountry?.setAdapter(adapterCountries)
+        binding.dropdownCountry.setAdapter(adapterCountries)
 
         val fakeCities = listOf("Cairo", "Kazanlak", "Khartoum", "Alex")
         val adapterCities = ArrayAdapter(requireContext(), R.layout.list_item, fakeCities)
-        binding?.dropdownCity?.setAdapter(adapterCities)
+        binding.dropdownCity.setAdapter(adapterCities)
 
-        binding?.buttonSelectFile?.setOnClickListener {
+        binding.buttonSelectFile.setOnClickListener {
             val cameraPermissions = arrayOf(Manifest.permission.CAMERA)
             if (!MyPermissions.isPermissionsGranted(requireActivity(), cameraPermissions)) {
                 MyPermissions.requestPermissionFragment(
@@ -75,7 +77,7 @@ class EditProfileFragment : Fragment() {
             }
         }
 
-        binding?.buttonSaveProfile?.setOnClickListener {
+        binding.buttonSaveProfile.setOnClickListener {
             findNavController().navigate(EditProfileFragmentDirections.actionEditProfileFragmentToProfileFragment())
         }
 
@@ -88,17 +90,17 @@ class EditProfileFragment : Fragment() {
             RoleDto(1,"Learner"), RoleDto(2,"Mentor"), RoleDto(3,"Program Assistant"),
             RoleDto(4,"Program Assistant Lead"), RoleDto(5,"Mentor Manager"),)
         chipsTechnicality.forEach {
-            val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding?.chipGroupTechnicalProficiency, false) as Chip
+            val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding.chipGroupTechnicalProficiency, false) as Chip
             chip.text = it.name
 
-            binding?.chipGroupTechnicalProficiency?.addView(chip)
+            binding.chipGroupTechnicalProficiency.addView(chip)
         }
 
         chipsRules.forEach {
-            val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding?.chipGroupTechnicalProficiency, false) as Chip
+            val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding.chipGroupTechnicalProficiency, false) as Chip
             chip.text = it.name
 
-            binding?.chipGroupPreviousRolesHeld?.addView(chip)
+            binding.chipGroupPreviousRolesHeld.addView(chip)
         }
 
         val fakeDocs = listOf(
@@ -115,17 +117,17 @@ class EditProfileFragment : Fragment() {
 
         }
 
-        binding?.recyclerViewDocuments?.adapter = documentAdapter
-        binding?.recyclerViewPreviousPrograms?.adapter = documentsProfileAdapter
+        binding.recyclerViewDocuments.adapter = documentAdapter
+        binding.recyclerViewPreviousPrograms.adapter = documentsProfileAdapter
 
         documentAdapter.submitList(fakeDocs)
         documentsProfileAdapter.submitList(fakeDocs)
 
-        binding?.topbar?.imageViewBack?.setOnClickListener {
+        binding.topbar.imageViewBack.setOnClickListener {
             findNavController().navigateUp()
         }
 
-        return binding?.root
+        return binding.root
     }
 
 
@@ -158,7 +160,7 @@ class EditProfileFragment : Fragment() {
                 Glide.with(this).load(imageFile)
                     .circleCrop()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(binding!!.imageViewProfileImg)
+                    .into(binding.imageViewProfileImg)
 
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -196,6 +198,6 @@ class EditProfileFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
+        _binding = null
     }
 }
