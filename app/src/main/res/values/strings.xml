@@ -82,6 +82,7 @@
     <string name="add_program">Add Program</string>
     <string name="instagram">Instagram</string>
     <string name="notification">Notification</string>
+    <string name="programs">Programs</string>
 
     <!--  OnBoarding Screens Messages  -->
     <string-array name="messages">
@@ -94,5 +95,14 @@ assigned to you </item>
 end-to-end encryption
 technology</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all">All</string>
+    <string name="assigned">Assigned</string>
+    <string name="completed">Completed</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="messages">Messages</string>
+    <string name="profile">Profile</string>
 
 </resources>
