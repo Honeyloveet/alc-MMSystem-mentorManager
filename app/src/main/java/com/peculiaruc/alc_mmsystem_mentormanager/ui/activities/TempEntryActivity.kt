@@ -24,6 +24,11 @@ class TempEntryActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.buttonPrograms.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.buttonBack.setOnClickListener {
             onBackPressed()
         }

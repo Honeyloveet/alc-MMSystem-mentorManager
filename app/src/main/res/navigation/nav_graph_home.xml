@@ -9,5 +9,30 @@
         android:id="@+id/programsFragment"
         android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.ProgramsFragment"
         android:label="fragment_programs"
-        tools:layout="@layout/fragment_programs" />
+        tools:layout="@layout/fragment_programs" >
+        <action
+            android:id="@+id/action_programsFragment_to_programDetailsFragment"
+            app:destination="@id/programDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/programDetailsFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.ProgramDetailsFragment"
+        android:label="fragment_program_details"
+        tools:layout="@layout/fragment_program_details" >
+        <action
+            android:id="@+id/action_programDetailsFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_programDetailsFragment_to_programCriteriaFormFragment"
+            app:destination="@id/programCriteriaFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/programCriteriaFormFragment"
+        android:name="com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.ProgramCriteriaFormFragment"
+        android:label="fragment_program_criteria_form"
+        tools:layout="@layout/fragment_program_criteria_form" >
+        <action
+            android:id="@+id/action_programCriteriaFormFragment_to_programDetailsFragment"
+            app:destination="@id/programDetailsFragment" />
+    </fragment>
 </navigation>

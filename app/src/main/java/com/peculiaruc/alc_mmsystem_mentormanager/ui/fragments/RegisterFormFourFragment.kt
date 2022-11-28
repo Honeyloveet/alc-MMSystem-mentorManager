@@ -35,6 +35,7 @@ class RegisterFormFourFragment : Fragment() {
         val documentAdapter = DocumentsAdapter {
 
         }
+
         binding?.recyclerViewDocuments?.adapter = documentAdapter
         documentAdapter.submitList(fakeDocs)
 

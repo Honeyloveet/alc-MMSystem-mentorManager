@@ -34,7 +34,9 @@ class NewTaskFragment : Fragment() {
         }
 
         binding.buttonCreateTask.setOnClickListener {
-            NewTaskDialogFragment().show(parentFragmentManager, "createNewTask")
+            NewTaskDialogFragment{
+                findNavController().navigate(NewTaskFragmentDirections.actionNewTaskFragmentToTasksFragment())
+            }.show(parentFragmentManager, "createNewTask")
         }
 
         // Inflate the layout for this fragment

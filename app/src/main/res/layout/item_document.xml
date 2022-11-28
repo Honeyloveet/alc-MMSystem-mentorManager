@@ -40,5 +40,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView_choose"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView_choose"
-        android:src="@drawable/ic_remove" />
+        android:src="@drawable/ic_remove"
+        tools:ignore="ContentDescription" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

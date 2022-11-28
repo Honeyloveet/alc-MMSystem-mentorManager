@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ProgramCriteriaFormFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorOnPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:collapseIcon="@drawable/ic_back"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:navigationIcon="@drawable/ic_back"
+                app:navigationIconTint="@color/mms_black_2"
+                app:title="Join Program"
+                app:titleMarginStart="0dp"
+                app:titleTextColor="@color/mms_black_2" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/textView_question1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="Leadership skills from the previous mentoring program?"
+            android:textColor="@color/mms_black_5"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField_answer1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/mms_black_9"
+            app:layout_constraintEnd_toEndOf="@+id/textView_question1"
+            app:layout_constraintStart_toStartOf="@+id/textView_question1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:hint="Program Assistant"
+                android:textColor="@color/mms_black_5"
+                android:textColorHint="@color/mms_black_5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView_question2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="Provide a link of project built with the preferred language."
+            android:textColor="@color/mms_black_5"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_answer1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField_answer2_1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            app:boxStrokeColor="@color/mms_black_9"
+            app:layout_constraintEnd_toEndOf="@+id/textView_question1"
+            app:layout_constraintStart_toStartOf="@+id/textView_question1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:hint="Project 1 URL"
+                android:textColor="@color/mms_black_5"
+                android:textColorHint="@color/mms_black_5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField_answer2_2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:boxStrokeColor="@color/mms_black_9"
+            app:layout_constraintEnd_toEndOf="@+id/textView_question1"
+            app:layout_constraintStart_toStartOf="@+id/textView_question1"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_answer2_1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_regular"
+                android:hint="Project 2 URL"
+                android:textColor="@color/mms_black_5"
+                android:textColorHint="@color/mms_black_5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView_question3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="Are you experienced being a past mentor in the same Program in Andela?"
+            android:textColor="@color/mms_black_5"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_answer2_2" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/radio_button_yes"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/textView_question3"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question3">
+
+            <RadioButton
+                android:id="@+id/radio_button_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="Yes"
+                android:textColor="@color/mms_black_5"
+                android:textSize="16sp"
+                app:buttonTint="@color/mms_pry_3" />
+
+            <RadioButton
+                android:id="@+id/radio_button_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/mukta_regular"
+                android:text="No"
+                android:textColor="@color/mms_black_5"
+                android:textSize="16sp"
+                app:buttonTint="@color/mms_pry_3" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_question4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="Upload a recommendation letter for the selected program."
+            android:textColor="@color/mms_black_5"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_documents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_chips_choose"
+            android:paddingBottom="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@+id/textView_question4"
+            app:layout_constraintStart_toStartOf="@+id/textView_question4"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question4"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_document" />
+
+        <TextView
+            android:id="@+id/textView_question5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mukta_regular"
+            android:text="Upload a recommendation letter for the selected program."
+            android:textColor="@color/mms_black_5"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView_documents" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup_previous_roles_held"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_chips_choose"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            app:fontFamily="@font/mukta_regular"
+            app:layout_constraintEnd_toEndOf="@+id/textView_question5"
+            app:layout_constraintStart_toStartOf="@+id/textView_question5"
+            app:layout_constraintTop_toBottomOf="@+id/textView_question5"
+            app:selectionRequired="true"
+            app:singleLine="false"
+            app:singleSelection="false">
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_submit"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="15dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            app:cornerRadius="10dp"
+            app:fontFamily="@font/mukta_semi_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup_previous_roles_held" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

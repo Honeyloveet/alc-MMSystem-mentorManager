@@ -8,6 +8,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -97,7 +98,7 @@ class EditProfileFragment : Fragment() {
         }
 
         chipsRules.forEach {
-            val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding.chipGroupTechnicalProficiency, false) as Chip
+            val chip = layoutInflater.inflate(R.layout.custom_chip_choice, binding.chipGroupPreviousRolesHeld, false) as Chip
             chip.text = it.name
 
             binding.chipGroupPreviousRolesHeld.addView(chip)
@@ -143,7 +144,7 @@ class EditProfileFragment : Fragment() {
                     val imageBitmap = BitmapFactory.decodeStream(imageStream)
                     setUserImageBitmap(imageBitmap)
                 } catch (ex: IOException) {
-
+                    Log.e("EditProfileFragment", "Exception: ${ex.stackTrace}")
                 }
             }
         }
@@ -184,8 +185,7 @@ class EditProfileFragment : Fragment() {
                 }
             }
             if (isAllAccepted) {
-                if (requestCode == 1)
-                    openImageChooserIntent()
+                openImageChooserIntent()
             }
         }
     }

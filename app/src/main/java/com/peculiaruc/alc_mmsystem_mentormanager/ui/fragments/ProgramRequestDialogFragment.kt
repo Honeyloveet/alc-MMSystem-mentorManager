@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentNewTaskDialogBinding
+import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentProgramRequestDialogBinding
 
-class NewTaskDialogFragment(private val buttonDoneClickListener: (Boolean) -> Unit) : BottomSheetDialogFragment() {
+class ProgramRequestDialogFragment(private val buttonDoneClickListener: (Boolean) -> Unit) : BottomSheetDialogFragment() {
 
-    private var _binding: FragmentNewTaskDialogBinding? = null
+    private var _binding: FragmentProgramRequestDialogBinding? = null
 
     private val binding get() = _binding!!
 
@@ -17,7 +17,7 @@ class NewTaskDialogFragment(private val buttonDoneClickListener: (Boolean) -> Un
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentNewTaskDialogBinding.inflate(inflater, container, false)
+        _binding = FragmentProgramRequestDialogBinding.inflate(inflater, container, false)
 
         binding.buttonDone.setOnClickListener {
             buttonDoneClickListener(true)
