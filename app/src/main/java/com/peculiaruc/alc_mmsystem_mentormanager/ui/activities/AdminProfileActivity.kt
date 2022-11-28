@@ -22,9 +22,7 @@ class AdminProfileActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[AdminProfileViewModel::class.java]
 
-        binding.topbar.textViewHeadline.text = getString(R.string.profile_toolbar)
-
-        binding.topbar.imageViewBack.setOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
 

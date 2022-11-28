@@ -1,6 +1,7 @@
 package com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -19,6 +20,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.chip.Chip
+import com.google.android.material.textfield.TextInputLayout
 import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.ChipDto
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.DocumentDto
@@ -119,18 +121,37 @@ class EditProfileFragment : Fragment() {
         }
 
         binding.recyclerViewDocuments.adapter = documentAdapter
-        binding.recyclerViewPreviousPrograms.adapter = documentsProfileAdapter
 
         documentAdapter.submitList(fakeDocs)
         documentsProfileAdapter.submitList(fakeDocs)
 
-        binding.topbar.imageViewBack.setOnClickListener {
-            findNavController().navigateUp()
+        addProgramView()
+        addProgramView()
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigate(EditProfileFragmentDirections.actionEditProfileFragmentToProfileFragment())
+        }
+
+        binding.buttonPreviousPrograms.setOnClickListener {
+            addProgramView()
         }
 
         return binding.root
     }
 
+    @SuppressLint("InflateParams")
+    private fun addProgramView() {
+        val view = layoutInflater.inflate(R.layout.program_edit_text_layout, null, false)
+        val textInputLayout = view.findViewById<TextInputLayout>(R.id.outlinedTextField_programs1)
+        textInputLayout.setEndIconOnClickListener {
+            removeView(view)
+        }
+        binding.linearLayoutProgramsHeld.addView(view)
+    }
+
+    private fun removeView(view: View?) {
+        binding.linearLayoutProgramsHeld.removeView(view)
+    }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

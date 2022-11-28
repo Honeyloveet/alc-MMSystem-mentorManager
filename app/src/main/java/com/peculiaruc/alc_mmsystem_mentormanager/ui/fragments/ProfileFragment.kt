@@ -34,7 +34,7 @@ class ProfileFragment : Fragment() {
 
         Glide.with(this).load("https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80")
             .circleCrop()
-            .placeholder(R.drawable.ic_user_avater)
+            .placeholder(R.drawable.profile_circle)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(binding.imageViewProfileImg)
 
@@ -62,8 +62,8 @@ class ProfileFragment : Fragment() {
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToEditProfileFragment())
         }
 
-        binding.topbar.imageViewBack.setOnClickListener {
-            findNavController().navigateUp()
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToNotificationsFragment())
         }
 
         return binding.root

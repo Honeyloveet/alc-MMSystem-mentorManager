@@ -6,12 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.AdminProfileActivity">
 
-    <include
-        android:id="@+id/topbar"
-        layout="@layout/layout_top_bar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorOnPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:titleMarginStart="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:collapseIcon="@drawable/ic_back"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/mms_black_2"
+            app:title="Profile"
+            app:titleTextColor="@color/mms_black_2" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -20,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@id/button_message_admin"
-        app:layout_constraintTop_toBottomOf="@+id/topbar">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
