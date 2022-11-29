@@ -125,7 +125,7 @@
         app:cornerRadius="10dp"
         app:fontFamily="@font/mukta_semi_bold"
         app:icon="@drawable/google_icon_1"
-        app:iconPadding="-70dp"
+        app:iconPadding="@dimen/google_icon_padding"
         app:iconTint="@android:color/transparent"
         app:iconTintMode="add"
         app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_password"

@@ -9,6 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,13 +17,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView_become_a_mentor_manager"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="23dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="31dp"
                 android:text="@string/become_a_mentor_manager"
                 android:textColor="@color/mms_pry_2"
@@ -129,28 +130,25 @@
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginBottom="30dp"
                 android:text="@string/next"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="18sp"
                 app:cornerRadius="10dp"
                 app:fontFamily="@font/mukta_semi_bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/button_previous"
                 app:layout_constraintEnd_toEndOf="@+id/chipGroup_technical_proficiency"
                 app:layout_constraintStart_toEndOf="@+id/button_previous"
-                app:layout_constraintTop_toBottomOf="@+id/chipGroup_previous_roles_held" />
+                app:layout_constraintTop_toTopOf="@+id/button_previous" />
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/button_previous"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="143dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="30dp"
-                android:backgroundTint="@color/white"
-                android:outlineProvider="none"
                 android:text="@string/previous"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -162,8 +160,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/button_next"
                 app:layout_constraintStart_toStartOf="@+id/chipGroup_technical_proficiency"
                 app:layout_constraintTop_toBottomOf="@+id/chipGroup_previous_roles_held"
-                app:strokeColor="@color/mms_pry_2"
-                app:strokeWidth="1dp" />
+                app:layout_constraintVertical_bias="1.0"
+                app:strokeColor="@color/mms_pry_2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
