@@ -9,6 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +17,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView_become_a_mentor_manager"
@@ -182,7 +183,7 @@
                 android:id="@+id/button_next"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="46dp"
                 android:layout_marginBottom="30dp"
                 android:paddingVertical="15dp"
                 android:text="@string/next"
@@ -194,7 +195,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/outlinedTextField_city"
                 app:layout_constraintStart_toStartOf="@+id/outlinedTextField_city"
-                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_city" />
+                app:layout_constraintTop_toBottomOf="@+id/outlinedTextField_city"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
