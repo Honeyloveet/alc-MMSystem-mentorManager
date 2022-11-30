@@ -10,6 +10,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentSignUpDialogBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.activities.LoginActivity
 
+/**
+ * its a bottom sheet dialog for signup success
+ */
 class SignUpDialogFragment : BottomSheetDialogFragment() {
 
     private var _binding: FragmentSignUpDialogBinding? = null

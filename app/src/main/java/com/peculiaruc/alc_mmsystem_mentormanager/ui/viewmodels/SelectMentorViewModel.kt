@@ -54,15 +54,7 @@ class SelectMentorViewModel : ViewModel() {
         val mentor9 = Mentor(id = 9, name = tempName, textOne = tempText1, textTwo = tempText2, textThree = tempText3, imageUrl = tempImage3, status = true)
         mentorList.add(mentor9)
 
-        val mentor10 = Mentor(
-            id = 10,
-            name = tempName,
-            textOne = tempText1,
-            textTwo = tempText2,
-            textThree = tempText3,
-            imageUrl = tempImage1,
-            status = true
-        )
+        val mentor10 = Mentor(id = 10, name = tempName, textOne = tempText1, textTwo = tempText2, textThree = tempText3, imageUrl = tempImage1, status = true)
         mentorList.add(mentor10)
 
         getMentors.postValue(mentorList)

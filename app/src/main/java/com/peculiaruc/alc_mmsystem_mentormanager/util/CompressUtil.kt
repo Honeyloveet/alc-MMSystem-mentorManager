@@ -6,9 +6,18 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 
+/**
+ * this object is used to compress images selected from storage
+ * for profile, messages, programs e.t.c before sending the image
+ * to the backend to save storage in the server
+ */
 object CompressUtil {
 
-     fun compressBitmap(imageBitmap : Bitmap,context: Context): File {
+    /**
+     * this function in [imageBitmap] and [context] compresses the
+     * imageBitmap and returns imageFile as [File]
+     */
+    fun compressBitmap(imageBitmap: Bitmap, context: Context): File {
         val imageFile =
             File(context.cacheDir, "${System.currentTimeMillis()}_profile")
         imageFile.createNewFile()

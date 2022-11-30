@@ -10,6 +10,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentSetNewPasswordDialogBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.activities.LoginActivity
 
+/**
+ * its a bottom sheet dialog for Program set new password success
+ */
 class SetNewPasswordDialogFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentSetNewPasswordDialogBinding

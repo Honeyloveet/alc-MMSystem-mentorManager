@@ -6,4 +6,7 @@ package com.peculiaruc.alc_mmsystem_mentormanager.data.models
  * which we get from the back end and dynamically add them
  * to the view
  */
-data class ChipDto(var id: Int , var name : String)
+data class ChipDto(
+    var id: Int,
+    var name : String
+)
