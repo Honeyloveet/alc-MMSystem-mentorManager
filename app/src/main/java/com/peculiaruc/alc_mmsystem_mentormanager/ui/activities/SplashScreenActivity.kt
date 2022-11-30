@@ -8,6 +8,9 @@ import android.os.Handler
 import android.os.Looper
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivitySplashScreenBinding
 
+/**
+ * This activity is used for splash screen
+ */
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
 

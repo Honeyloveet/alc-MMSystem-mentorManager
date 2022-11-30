@@ -9,6 +9,10 @@ import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivityAdminProfileBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.AdminProfileViewModel
 
+/**
+ * This activity is for Admin profile which
+ * manages the mentor manager
+ */
 class AdminProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAdminProfileBinding

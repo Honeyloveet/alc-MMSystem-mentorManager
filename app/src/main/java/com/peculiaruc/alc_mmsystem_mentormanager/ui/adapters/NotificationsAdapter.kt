@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.NotificationDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ItemNotificationBinding
 
+/**
+ * Notification Adapter for [NotificationDto]
+ */
 class NotificationsAdapter (
     private val notificationClickListener : (NotificationDto) -> Unit,
 ) :
@@ -26,6 +29,9 @@ class NotificationsAdapter (
         }
 
         companion object {
+            /**
+             * for returning ViewHolder on [onCreateViewHolder] function
+             */
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemNotificationBinding.inflate(layoutInflater, parent, false)
@@ -42,6 +48,10 @@ class NotificationsAdapter (
 
 }
 
+/**
+ * DiffUtil call back used to check oldItem with newItem for
+ * [NotificationDto]
+ */
 class NotificationsDiffCallback : DiffUtil.ItemCallback<NotificationDto>() {
     override fun areItemsTheSame(oldItem: NotificationDto, newItem: NotificationDto): Boolean {
         return oldItem == newItem

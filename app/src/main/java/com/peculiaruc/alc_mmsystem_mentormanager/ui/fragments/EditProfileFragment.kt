@@ -37,6 +37,9 @@ import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.IOException
 import java.io.InputStream
 
+/**
+ * This fragment is used for the user to edit his/her profile
+ */
 class EditProfileFragment : Fragment() {
 
     private var _binding: FragmentEditProfileBinding? = null
@@ -184,7 +187,7 @@ class EditProfileFragment : Fragment() {
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(binding.imageViewProfileImg)
 
-            } catch (e: Exception) {
+            } catch (e: IOException) {
                 e.printStackTrace()
             }
         }

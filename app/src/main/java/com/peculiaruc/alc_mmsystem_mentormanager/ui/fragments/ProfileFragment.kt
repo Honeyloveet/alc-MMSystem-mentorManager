@@ -17,6 +17,9 @@ import com.peculiaruc.alc_mmsystem_mentormanager.ui.activities.LoginActivity
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.DocumentsProfileAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.ProfileViewModel
 
+/**
+ * this fragment is used to show the profile of the user
+ */
 class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null

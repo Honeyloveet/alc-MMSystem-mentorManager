@@ -14,6 +14,10 @@ import com.peculiaruc.alc_mmsystem_mentormanager.data.models.RoleDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentRegisterFormThreeBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.RegisterFormThreeViewModel
 
+/**
+ * this fragment is used to fill form three when registering
+ * for the first time to be a Mentor Manager
+ */
 class RegisterFormThreeFragment : Fragment() {
 
     private lateinit var viewModel: RegisterFormThreeViewModel

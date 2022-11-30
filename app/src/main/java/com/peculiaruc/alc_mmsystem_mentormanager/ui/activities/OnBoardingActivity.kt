@@ -9,6 +9,9 @@ import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivityOnboardingBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.OnBoardingAdapter
 
+/**
+ * This activity is for onboarding screens
+ */
 class OnBoardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnboardingBinding

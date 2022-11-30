@@ -15,6 +15,9 @@ import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentTasksBindin
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.TasksAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.TasksViewModel
 
+/**
+ * this fragment is used to show the list of tasks
+ */
 class TasksFragment : Fragment() {
 
     private lateinit var binding: FragmentTasksBinding

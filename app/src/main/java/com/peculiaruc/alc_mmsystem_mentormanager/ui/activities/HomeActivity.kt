@@ -9,6 +9,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivityHomeBinding
 
+/**
+ * this activity is the Home activity(Dashboard)
+ */
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding

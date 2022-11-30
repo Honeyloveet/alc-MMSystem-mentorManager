@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentProgramRequestDialogBinding
 
+/**
+ * its a bottom sheet dialog for Program join request sent successfully message.
+ */
 class ProgramRequestDialogFragment(private val buttonDoneClickListener: (Boolean) -> Unit) : BottomSheetDialogFragment() {
 
     private var _binding: FragmentProgramRequestDialogBinding? = null

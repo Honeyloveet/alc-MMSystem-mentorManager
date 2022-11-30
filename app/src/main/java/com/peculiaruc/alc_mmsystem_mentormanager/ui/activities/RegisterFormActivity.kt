@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivityRegistrFormBinding
 
+/**
+ * This activity holds registration forms
+ * fragment one, two, three, four
+ */
 class RegisterFormActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistrFormBinding

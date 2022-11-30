@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivityLoginBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.LoginViewModel
 
+/**
+ * This activity is for the user to Login
+ */
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding

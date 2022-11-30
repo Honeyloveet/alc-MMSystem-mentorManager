@@ -6,6 +6,10 @@ import android.os.Bundle
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ActivitySignUpBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.fragments.SignUpDialogFragment
 
+/**
+ * this activity is used for to sign up
+ * new MentorManager user
+ */
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignUpBinding

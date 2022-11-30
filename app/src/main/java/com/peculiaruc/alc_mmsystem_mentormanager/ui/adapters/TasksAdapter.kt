@@ -10,14 +10,28 @@ import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ListTasksItemBindin
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * An adapter for list of Tasks
+ */
 class TasksAdapter : RecyclerView.Adapter<TasksAdapter.TasksAdapterViewHolder>() {
 
     private lateinit var clickListener : OnItemClickListener
 
+    /**
+     * An interface which listens clicks
+     * when a task is clicked form the list
+     */
     interface OnItemClickListener {
+        /**
+         * function for task click listener
+         * with position of the adapter
+         */
         fun onItemClicked(position: Int)
     }
 
+    /**
+     * sets the click listener for [clickListener]
+     */
     fun setOnItemClickListener(listener: OnItemClickListener) {
         clickListener = listener
     }

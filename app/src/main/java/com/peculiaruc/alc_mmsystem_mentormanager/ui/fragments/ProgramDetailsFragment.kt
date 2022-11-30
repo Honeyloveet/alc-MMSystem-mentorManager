@@ -11,6 +11,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentProgramDetailsBinding
 
+/**
+ * this fragment is used to show the details of a specific program
+ */
 class ProgramDetailsFragment : Fragment() {
 
     private var _binding: FragmentProgramDetailsBinding? = null

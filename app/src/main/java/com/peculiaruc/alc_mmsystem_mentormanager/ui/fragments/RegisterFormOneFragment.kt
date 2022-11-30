@@ -27,6 +27,10 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import java.io.*
 
+/**
+ * this fragment is used to fill form one when registering
+ * for the first time to be a Mentor Manager
+ */
 @Suppress("DEPRECATION")
 class RegisterFormOneFragment : Fragment() {
 
@@ -126,7 +130,7 @@ class RegisterFormOneFragment : Fragment() {
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(binding!!.imageViewProfileImg)
 
-            } catch (e: Exception) {
+            } catch (e: IOException) {
                 e.printStackTrace()
             }
         }

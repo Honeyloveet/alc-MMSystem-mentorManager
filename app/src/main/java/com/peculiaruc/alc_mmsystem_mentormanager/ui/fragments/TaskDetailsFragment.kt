@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentTaskDetailsBinding
 
+/**
+ * this fragment is used to show the details of a specific Task
+ */
 class TaskDetailsFragment : Fragment() {
 
     private var _binding: FragmentTaskDetailsBinding? = null

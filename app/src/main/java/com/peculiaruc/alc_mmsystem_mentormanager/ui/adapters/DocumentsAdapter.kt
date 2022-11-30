@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.DocumentDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ItemDocumentBinding
 
+/**
+ * Documents Adapter for [DocumentDto]
+ */
 class DocumentsAdapter (
     private val documentClickListener : (DocumentDto) -> Unit,
 ) :
@@ -27,6 +30,9 @@ class DocumentsAdapter (
         }
 
         companion object {
+            /**
+             * for returning ViewHolder on [onCreateViewHolder] function
+             */
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemDocumentBinding.inflate(layoutInflater, parent, false)
@@ -43,6 +49,10 @@ class DocumentsAdapter (
 
 }
 
+/**
+ * DiffUtil call back used to check oldItem with newItem for
+ * [DocumentDto]
+ */
 class DocumentsDiffCallback : DiffUtil.ItemCallback<DocumentDto>() {
     override fun areItemsTheSame(oldItem: DocumentDto, newItem: DocumentDto): Boolean {
         return oldItem == newItem

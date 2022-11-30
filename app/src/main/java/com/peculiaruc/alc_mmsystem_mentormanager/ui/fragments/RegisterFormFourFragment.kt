@@ -14,6 +14,10 @@ import com.peculiaruc.alc_mmsystem_mentormanager.ui.activities.MainActivity
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.DocumentsAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.RegisterFormFourViewModel
 
+/**
+ * this fragment is used to fill form four when registering
+ * for the first time to be a Mentor Manager
+ */
 class RegisterFormFourFragment : Fragment() {
 
     private lateinit var viewModel: RegisterFormFourViewModel

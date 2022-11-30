@@ -13,6 +13,10 @@ import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentTaskAssigne
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.TaskAssignedMentorsAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.TaskAssignedMentorsViewModel
 
+/**
+ * this fragment is used to show the list of mentors
+ * who are assigned to a specific task
+ */
 class TaskAssignedMentorsFragment : Fragment() {
 
     private var _binding: FragmentTaskAssignedMentorsBinding? = null

@@ -14,7 +14,9 @@ import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentSelectTaskMentorBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.SelectMentorAdapter
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.SelectMentorViewModel
-
+/**
+ * this fragment is used to select mentors for a specific Task
+ */
 class SelectTaskMentorFragment : Fragment() {
 
     private var _binding: FragmentSelectTaskMentorBinding? = null

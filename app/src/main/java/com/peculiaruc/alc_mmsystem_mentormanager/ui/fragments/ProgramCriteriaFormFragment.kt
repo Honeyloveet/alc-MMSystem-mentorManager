@@ -13,6 +13,9 @@ import com.peculiaruc.alc_mmsystem_mentormanager.data.models.RoleDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentProgramCriteriaFormBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.DocumentsAdapter
 
+/**
+ * this fragment is used to fill criteria to join a program
+ */
 class ProgramCriteriaFormFragment : Fragment() {
 
     private var _binding: FragmentProgramCriteriaFormBinding? = null

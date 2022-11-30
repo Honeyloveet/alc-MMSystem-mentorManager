@@ -10,6 +10,10 @@ import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentRegisterFormTwoBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.viewmodels.RegisterFormTwoViewModel
 
+/**
+ * this fragment is used to fill form two when registering
+ * for the first time to be a Mentor Manager
+ */
 class RegisterFormTwoFragment : Fragment() {
 
     private lateinit var viewModel: RegisterFormTwoViewModel

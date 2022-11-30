@@ -1,5 +1,9 @@
 package com.peculiaruc.alc_mmsystem_mentormanager.data.models
 
+/**
+ * Holds the Task information
+ * which comes form the backend.
+ */
 data class Task(
     var id: Int,
     var title: String,

@@ -12,10 +12,16 @@ import com.peculiaruc.alc_mmsystem_mentormanager.R
 import com.peculiaruc.alc_mmsystem_mentormanager.data.models.Mentor
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.ListMentorsBinding
 
+/**
+ * An adapter for mentors list to select for task
+ */
 class SelectMentorAdapter(private val context: Context) : RecyclerView.Adapter<SelectMentorAdapter.SelectMentorAdapterViewHolder>() {
 
+    /**
+     * view holder class for [SelectMentorAdapter]
+     */
     inner class SelectMentorAdapterViewHolder(val binding: ListMentorsBinding) : RecyclerView.ViewHolder(binding.root) {
-
+        // TODO: Implement the ViewHolder
     }
 
     private val differCallback = object : DiffUtil.ItemCallback<Mentor>() {

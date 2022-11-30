@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentNewTaskDialogBinding
 
+/**
+ * its a bottom sheet dialog for New task created successfully.
+ */
 class NewTaskDialogFragment(private val buttonDoneClickListener: (Boolean) -> Unit) : BottomSheetDialogFragment() {
 
     private var _binding: FragmentNewTaskDialogBinding? = null

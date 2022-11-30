@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentNewTaskBinding
 
+/**
+ * this fragment is used to create New Task
+ */
 class NewTaskFragment : Fragment() {
 
     private var _binding: FragmentNewTaskBinding? = null

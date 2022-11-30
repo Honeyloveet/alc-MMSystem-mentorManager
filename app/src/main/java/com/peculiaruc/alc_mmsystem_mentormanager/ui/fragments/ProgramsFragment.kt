@@ -13,7 +13,9 @@ import com.peculiaruc.alc_mmsystem_mentormanager.data.models.ProgramDto
 import com.peculiaruc.alc_mmsystem_mentormanager.databinding.FragmentProgramsBinding
 import com.peculiaruc.alc_mmsystem_mentormanager.ui.adapters.ProgramAdapter
 
-
+/**
+ * this fragment is used to show the list of programs
+ */
 class ProgramsFragment : Fragment() {
 
     var binding: FragmentProgramsBinding? = null
@@ -25,26 +27,30 @@ class ProgramsFragment : Fragment() {
     ): View? {
         binding = FragmentProgramsBinding.inflate(layoutInflater)
 
-        val allProgramsFakes =  listOf(ProgramDto(1,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"),
-                                        ProgramDto(2,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"),
-                                        ProgramDto(3,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"),
-                                        ProgramDto(4,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"),
-                                        ProgramDto(5,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"),
-                                        ProgramDto(6,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"),
-                                        ProgramDto(7,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"),
-                                        ProgramDto(8,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"),
-                                        ProgramDto(9,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"),
-                                        ProgramDto(10,"Google Africa Scholarship Program","https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"),
+        val tempImage1 = "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        val tempImage2 = "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        val tempImage3 = "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+
+        val allProgramsFakes =  listOf(ProgramDto(1,"Google Africa Scholarship Program 1",tempImage1),
+                                        ProgramDto(2,"Google Africa Scholarship Program 2",tempImage2),
+                                        ProgramDto(3,"Google Africa Scholarship Program 3",tempImage3),
+                                        ProgramDto(4,"Google Africa Scholarship Program 4",tempImage1),
+                                        ProgramDto(5,"Google Africa Scholarship Program 5",tempImage2),
+                                        ProgramDto(6,"Google Africa Scholarship Program 6",tempImage3),
+                                        ProgramDto(7,"Google Africa Scholarship Program 7",tempImage1),
+                                        ProgramDto(8,"Google Africa Scholarship Program 8",tempImage2),
+                                        ProgramDto(9,"Google Africa Scholarship Program 9",tempImage3),
+                                        ProgramDto(10,"Google Africa Scholarship Program 10",tempImage1),
         )
 
-        val assignedFakes =  listOf(ProgramDto(6,"Google Africa Scholarship Program 2","https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"),
-                                        ProgramDto(7,"Google Africa Scholarship Program 2","https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"),
-                                        ProgramDto(8,"Google Africa Scholarship Program 2","https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"),
+        val assignedFakes =  listOf(ProgramDto(6,"Google Africa Scholarship Program 11",tempImage1),
+                                        ProgramDto(7,"Google Africa Scholarship Program 12",tempImage2),
+                                        ProgramDto(8,"Google Africa Scholarship Program 13",tempImage3),
         )
 
-        val completedFakes =  listOf(ProgramDto(10,"Google Africa Scholarship Program 3","https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"),
-                                        ProgramDto(11,"Google Africa Scholarship Program 3","https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"),
-                                        ProgramDto(12,"Google Africa Scholarship Program 3","https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"),
+        val completedFakes =  listOf(ProgramDto(10,"Google Africa Scholarship Program 14",tempImage1),
+                                        ProgramDto(11,"Google Africa Scholarship Program 15",tempImage2),
+                                        ProgramDto(12,"Google Africa Scholarship Program 16",tempImage3),
         )
 
         val programAdapter = ProgramAdapter(requireContext()){
